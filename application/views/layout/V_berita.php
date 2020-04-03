@@ -18,7 +18,14 @@
 					<div class="box-header">
 						<h3 class="box-title">Hover Data Table</h3>
 					</div>
-					<!-- /.box-header -->
+				
+					
+						<?php if ($this->session->flashdata('success')):?>
+					<div id="pesan" class="alert alert-success" role="alert">
+							<strong><?=$this->session->flashdata('success');
+						?></strong>
+					</div>
+					<?php endif;?>
 					<div class="box-body">
 						<table id="example2" class="table table-bordered table-hover">
 							<thead>
@@ -37,8 +44,8 @@
 										?>
 										<tr>
 											<td><?= $no++ ?></td>
-											<td><?= $value->judul; ?></td>
-											<td><?= $value->image; ?></td>
+											<td><?=$value->judul?></td>
+											<td><img style="width: 100px;height: 100px;"  src="<?=base_url();?>assets/images/<?=$value->image?>" ></td>
 											<td><?= $value->isi; ?></td>
 									<td>
 								<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"

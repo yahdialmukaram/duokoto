@@ -4,7 +4,9 @@ class Model extends CI_Model
 
     public function tampil_data()
     {
-        return $this->db->get('tb_berita')->result();
+        $this->db->from('tb_berita');
+        $this->db->order_by('id', 'desc');
+        return $this->db->get()->result();
     }
 
     // public function model_simpan($data)
@@ -18,10 +20,12 @@ class Model extends CI_Model
     $this->db->where('id',$id);
     $this->db->delete('tb_berita');
     } 
-     function simpan_berita($jdl,$berita,$gambar)
+     function simpan_berita($object)
      {
-        $hsl=$this->db->query("INSERT INTO tb_berita (judul,isi,image) VALUES ('$jdl','$berita','$gambar')");
-        return $hsl;
+        // $hsl=$this->db->query("INSERT INTO tb_berita (judul,isi,image) VALUES ('$jdl','$berita','$gambar')");
+        // return $hsl;
+        $this->db->insert('tb_berita', $object);
+        
     }
     public function model_edit($id)
     {
@@ -35,6 +39,15 @@ class Model extends CI_Model
 
 
     }
+    public function berita_user()
+    {
+        $this->db->from('tb_berita');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit(5);
+       return $this->db->get()->result();
+        
+    }
+    
 
 }
 

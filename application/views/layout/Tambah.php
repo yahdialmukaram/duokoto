@@ -23,7 +23,7 @@
 								<form action="<?php echo base_url();?>c_admin/simpan_post/" method="post"enctype="multipart/form-data">
 									<input type="text" name="judul" class="form-control" placeholder="Judul berita"
 										required /><br />
-									<textarea id="ckeditor" name="berita" class="form-control"
+									<textarea id="ckeditor" name="isi" class="form-control"
 										required></textarea><br />
 									<input type="file" name="filefoto" required><br>
 									<button class="btn btn-primary btn-lg" type="submit">Post Berita</button>

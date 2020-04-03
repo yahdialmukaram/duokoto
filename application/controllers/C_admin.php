@@ -72,6 +72,7 @@ class C_admin extends CI_Controller {
 		$this->load->view('layout/edit',$data);
 		$this->load->view('layout/footer');
 		// print_r($data);
+		// echo json_encode($data);
 	}
 	public function simpan_edit($id)
 	{
@@ -117,9 +118,15 @@ class C_admin extends CI_Controller {
  
                 $gambar=$gbr['file_name'];
                 $jdl=$this->input->post('judul');
-                $berita=$this->input->post('berita');
- 
-                $this->Model->simpan_berita($jdl,$berita,$gambar);
+				$isi=$this->input->post('isi');
+				$object=[
+					'judul'=>$jdl,
+					'isi'=>$isi,
+					'image'=>$gambar
+				];
+				$this->Model->simpan_berita($object);
+				$this->session->set_flashdata('success', 'Berita berhasil di simpan');
+				
                 redirect('c_admin/V_berita');
         }else{
             redirect('c_admin/V_berita');

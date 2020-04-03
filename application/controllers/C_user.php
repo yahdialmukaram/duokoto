@@ -14,9 +14,11 @@ class C_user extends CI_Controller {
     }
     public function blog()
     {
+        $data['berita']=$this->Model->berita_user();
         $this->load->view('user/header');		
-        $this->load->view('user/blog');
+        $this->load->view('user/blog',$data);
         $this->load->view('user/footer');
+        // print_r($data);
     }
     public function gallery()
     {
