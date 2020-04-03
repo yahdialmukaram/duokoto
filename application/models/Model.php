@@ -14,6 +14,7 @@ class Model extends CI_Model
 
     function model_hapus($id)
     {
+        // ini model
     $this->db->where('id',$id);
     $this->db->delete('tb_berita');
     } 

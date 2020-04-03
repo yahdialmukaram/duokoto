@@ -85,6 +85,7 @@ class C_admin extends CI_Controller {
 		$this->Model->model_edit_simpan($id,$data);
 		
 		redirect('c_admin/v_berita');
+		// yahdi
 
 
 	}
