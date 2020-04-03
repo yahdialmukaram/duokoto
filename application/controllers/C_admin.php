@@ -56,7 +56,7 @@ class C_admin extends CI_Controller {
 
 
 		}
-	
+	// ini admin
 
 	public function tambah()
 	{
