@@ -43,41 +43,30 @@
       </a>
     </div>
 	 </div>
+
+				 <!-- star -->
+
+		 <?php 
+		 	
+			 function limit_words($string, $word_limit){
+				 $words = explode(" ",$string);
+				 return implode(" ",array_splice($words,0,$word_limit));
+			 }
+				 foreach ($berita as $key => $value):?>
 	 <div class="col-sm-12 padding_all">
 	  <div class="center_4 clearfix">
 	   <div class="col-sm-4">
 	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
-	   </div>
-	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">TORQUENT PER</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">Consectetur</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
-	  </div>
-	 </div>
-	 
-	 <div class="col-sm-12 padding_all">
-	  <div class="center_4 clearfix">
-	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
+	   <a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>" width="100%"></a>
 	   </div>
 	  </div>
 	   <div class="col-sm-8">
 	  <div class="center_3">
 	  <h6><a href="#">DAPIBUS DIAM</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Pemuda duo koto malalo mngembangkan bisnis digital </a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
+	  <h3><a href="#"><?= $value->judul; ?> </a></h3>
+	  <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
+	  <a href="<?= base_url();?> home/<?= $value->id; ?>"> Selengkapnya</a>
+	  
 	  <ul>
 	      <li class="well_5"><a href="#">Nisi</a></li>
 		  <li class="well_5"><a href="#">Consectetur</a></li>
@@ -88,114 +77,32 @@
 	</div>
 	  </div>
 	 </div>
+	 <?php endforeach; ?>
+	  <!-- end -->
+
+	
 	 <div class="col-sm-12 padding_all">
 	  <div class="center_4 clearfix">
 	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
-	   </div>
+	   
 	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">SEMPER PORTA</a>, JANUARY 11, 2016<</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">Consectetur</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
+	 
 	  </div>
 	 </div>
 	 <div class="col-sm-12 padding_all">
 	  <div class="center_4 clearfix">
 	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
-	   </div>
+	  
 	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">MAURIS MASSA</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">Consectetur</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
+	 
 	  </div>
 	 </div>
 	 <div class="col-sm-12 padding_all">
 	  <div class="center_4 clearfix">
 	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
-	   </div>
+	  
 	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">OBIONEC OBIO</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">Consectetur</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
-	  </div>
-	 </div>
-	 <div class="col-sm-12 padding_all">
-	  <div class="center_4 clearfix">
-	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a>
-	   </div>
-	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">SEMPER PORTA</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">Consectetur</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
-	  </div>
-	 </div>
-	 <div class="col-sm-12 padding_all">
-	  <div class="center_4 clearfix">
-	   <div class="col-sm-4">
-	   <div class="center_2">
-	    <a href="#"><img src="<?= base_url();?>template/img/4.jpg" width="100%"></a>
-	   </div>
-	  </div>
-	   <div class="col-sm-8">
-	  <div class="center_3">
-	  <h6><a href="#">LACINIA NUNC</a>, JANUARY 11, 2016</h6>
-	  <h3><a href="#">Consectetur Adipiscing Elit. Integer Nec</a></h3>
-	  <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem</br> at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris</br> Vestibulum lacinia …</p>
-	  <ul>
-	      <li class="well_5"><a href="#">Nisi</a></li>
-		  <li class="well_5"><a href="#">con</a></li>
-		  <li>100 <i class="fa fa-eye"></i></li>
-		  <li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-	  </ul>
-	 </div>
-	</div>
+	 
 	  </div>
 	 </div>
 	 <div class="center_5 clearfix">

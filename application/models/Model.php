@@ -4,8 +4,9 @@ class Model extends CI_Model
 
     public function tampil_data()
     {
-        $this->db->from('tb_berita');
-        $this->db->order_by('id', 'desc');
+        $this->db
+        ->from('tb_berita')
+        ->order_by('id', 'desc');
         return $this->db->get()->result();
     }
 
@@ -45,6 +46,14 @@ class Model extends CI_Model
         $this->db->order_by('id', 'desc');
         $this->db->limit(5);
        return $this->db->get()->result();
+        
+    }
+    public function berita_home()
+    {
+        $this->db->from('tb_berita');
+        $this->db->order_by('id', 'desc');
+        $this->db->limit(5);
+        return $this->db->get()->result();
         
     }
     

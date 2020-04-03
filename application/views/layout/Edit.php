@@ -24,24 +24,28 @@
 								foreach ($edit as $value): 
 								?>
 
-								<form action="<?php echo base_url();?>c_admin/simpan_edit/<?=$value->id ?>" method="post"enctype="multipart/form-data">
-									<input type="text" name="judul" value="<?= $value->judul; ?>"class="form-control" placeholder="Judul berita"required /><br />
-									<textarea id="ckeditor" name="isi"class="form-control" required><?= $value->isi;?></textarea><br />
+								<form action="<?php echo base_url();?>c_admin/simpan_edit/<?=$value->id ?>"
+									method="post" enctype="multipart/form-data">
+									<input type="text" name="judul" value="<?= $value->judul; ?>" class="form-control"
+										placeholder="Judul berita" required /><br />
+									<textarea id="ckeditor" name="isi" class="form-control"
+										required><?= $value->isi;?></textarea><br />
+									<input type="file" name="filefoto" value="<?= $value->image;?>" required><br>
 									<button class="btn btn-primary btn-btn-xs" type="submit">Simpan</button>
 								</form>
 							</div>
-								<?php endforeach; ?>
+							<?php endforeach; ?>
 						</div>
 						<!-- tools box -->
-					
+
+					</div>
+					<!-- /.box -->
+
+
 				</div>
-				<!-- /.box -->
-
-
+				<!-- /.col-->
 			</div>
-			<!-- /.col-->
-		</div>
-		<!-- ./row -->
+			<!-- ./row -->
 	</section>
 	<!-- /.content -->
 </div>

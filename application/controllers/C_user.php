@@ -5,10 +5,11 @@ class C_user extends CI_Controller {
 
 	public function index()
 	{
-        // $this->load->view('layout/header');
+        $data['berita']= $this->Model->berita_home();
         $this->load->view('user/header');		
-        $this->load->view('user/home');
+        $this->load->view('user/home',$data);
         $this->load->view('user/footer');
+        // print_r($data);
 		// $this->load->view('layout/footer');		
 // redirect('c_user');
     }
