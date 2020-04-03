@@ -55,7 +55,12 @@
 					</div>
 					<!-- star -->
 
-					<?php foreach ($berita as $key => $value):?>
+					<?php
+					 function limit_words($string, $word_limit){
+						$words = explode(" ",$string);
+						return implode(" ",array_splice($words,0,$word_limit));
+					}
+					 foreach ($berita as $key => $value):?>
 					<div class="col-sm-12 padding_all">
 						<div class="center_4 clearfix">
 							<div class="col-sm-4">
@@ -68,7 +73,8 @@
 								<div class="center_3">
 									<h6><a href="#">DAPIBUS DIAM</a>, JANUARY 11, 2016</h6>
 									<h3><a href="#"><?= $value->judul; ?> </a></h3>
-									<h6><a href=""></a><?= $value->isi; ?></h6>
+									<!-- <h6><a href=""></a><?= $value->isi; ?></h6> -->
+									<h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
 									<ul>
 										<li class="well_5"><a href="#">Nisi</a></li>
 										<li class="well_5"><a href="#">Consectetur</a></li>

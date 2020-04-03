@@ -15,21 +15,21 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item">
-          <img src="<?= base_url();?>template/img/foto1.png" alt="...">
+          <img src="<?= base_url();?>template/img/foto6.jpg" alt="...">
           <div class="carousel-caption">
-            <h2 class="text-center">JORONG DUO KOTO MALALO<</h2>
+            <h2 class="text-center">JORONG DUO KOTO MALALO</h2>
           </div>
         </div>
         <div class="item active">
           <img src="<?= base_url();?>template/img/foto2.jpg" alt="...">
           <div class="carousel-caption">
-		  <h2 class="text-center">JORONG DUO KOTO MALALO<</h2>
+		  <h2 class="text-center">JORONG DUO KOTO MALALO</h2>
 		 </div>
         </div>
         <div class="item">
           <img src="<?= base_url();?>template/img/foto3.jpg" alt="...">
           <div class="carousel-caption">
-		  <h2 class="text-center">JORONG DUO KOTO MALALO<</h2>
+		  <h2 class="text-center">JORONG DUO KOTO MALALO</h2>
 		  </div>
         </div>
       </div>
