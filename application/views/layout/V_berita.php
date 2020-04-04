@@ -18,14 +18,21 @@
 					<div class="box-header">
 						<h3 class="box-title">Hover Data Table</h3>
 					</div>
-				
-					
-						<?php if ($this->session->flashdata('success')):?>
+
+					<!-- alert simpan data -->
+					<?php if ($this->session->flashdata('success')):?>
 					<div id="pesan" class="alert alert-success" role="alert">
-							<strong><?=$this->session->flashdata('success');
+						<strong><?=$this->session->flashdata('success');
 						?></strong>
 					</div>
 					<?php endif;?>
+					<!-- aler hapus data -->
+					<?php if ($this->session->flashdata('danger')):?>
+					<div id="pesan" class="alert alert-danger" role="alert">
+						<strong><?=$this->session->flashdata('danger');
+						?></strong>
+					</div>
+					<?php endif; ?>
 					<div class="box-body">
 						<table id="example2" class="table table-bordered table-hover">
 							<thead>
@@ -40,19 +47,19 @@
 							<tbody>
 								<?php
 								$no = 1;
-           					 foreach ($tb_berita as $value):
-										?>
-										<tr>
-											<td><?= $no++ ?></td>
-											<td><?=$value->judul?></td>
-											<td><img style="width: 100px;height: 100px;"  src="<?=base_url();?>assets/images/<?=$value->image?>" ></td>
-											<td><?= $value->isi; ?></td>
+           					 foreach ($tb_berita as $value): ?>
+								<tr>
+									<td><?= $no++ ?></td>
+									<td><?=$value->judul; ?></td>
+									<td><img style="width: 100px;height: 100px;"
+											src="<?=base_url();?>assets/images/<?=$value->image;?>"></td>
+									<td><?= $value->isi; ?></td>
 									<td>
-								<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"
-									class="btn btn-info btn-xs"> <i class="fa fa-edit"></i> Edit</a>
-								<a href="<?php echo base_url(); ?>c_admin/hapus_berita/<?php echo $value->id; ?>"
-									class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> Hapus</a>
-								</td>
+										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"
+											class="btn btn-info btn-xs"> <i class="fa fa-edit"></i> Edit</a>
+										<a href="<?php echo base_url(); ?>c_admin/hapus_berita/<?php echo $value->id; ?>"
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> Hapus</a>
+									</td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

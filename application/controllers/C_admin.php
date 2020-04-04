@@ -53,6 +53,8 @@ class C_admin extends CI_Controller {
 
 		// print_r($data);
 		$this->Model->model_edit_simpan($id,$data);
+		$this->session->set_flashdata('success', 'Data telah di ubah');
+		
 		
 		redirect('c_admin/v_berita');
 		// yahdi
@@ -62,6 +64,8 @@ class C_admin extends CI_Controller {
 	public function hapus_berita($id)
 	{
 		$this->Model->model_hapus($id);
+		$this->session->set_flashdata('danger','Data telah di hapus');
+		
 		redirect('c_admin/v_berita');
 	}
 	function simpan_post(){
