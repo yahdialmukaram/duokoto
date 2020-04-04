@@ -30,7 +30,7 @@
 										placeholder="Judul berita" required /><br />
 									<textarea id="ckeditor" name="isi" class="form-control"
 										required><?= $value->isi;?></textarea><br />
-									<input type="file" name="filefoto" value="<?= $value->image;?>" required><br>
+									<input type="file" name="filefoto" value="<?= $value->image;?>" ><br>
 									<button class="btn btn-primary btn-btn-xs" type="submit">Simpan</button>
 								</form>
 							</div>
