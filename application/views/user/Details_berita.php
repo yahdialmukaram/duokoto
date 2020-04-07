@@ -1,18 +1,20 @@
 <section id="center" class="clearfix">
 	<div class="container">
 		<div class="row">
+		<?php
+	 foreach ($details as $value ):?>
 			<div class="col-sm-12 padding_all">
 				<div class="col-sm-8">
 					<div class="blog_1">
 						<ul>
 							<li><a href="#">Adipiscing</a></li>
 						</ul>
-						<h2>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu</h2>
+						<h1><a href="#"><?= $value->judul; ?> </a></h1>
 					</div>
 					<div class="col-sm-12 padding_all">
 						<div class="col-sm-3 padding_all">
 							<div class="blog_2">
-								<h4><a href="#">MASSA CONUBIA</a>, MARCH 17, 2017</h4>
+							<h6><a href="#"><?= $value->tanggal;?></a>
 							</div>
 						</div>
 						<div class="col-sm-7"></div>
@@ -27,10 +29,6 @@
 					</div>
 					<div class="col-sm-12 padding_all">
 						<div class="col-sm-1 padding_all">
-							<div class="blog_4">
-								<h4>2</h4>
-								<p>CONUBIA</p>
-							</div>
 						</div>
 						<div class="col-sm-11 padding_all">
 							<div class="blog_5">
@@ -42,25 +40,44 @@
 						</div>
 					</div>
 
-					<?php
-	 foreach ($details as $value ):?>
+			
 
-					<!-- <a href="<?php echo base_url();?>c_user/details_berita/<?=$value->id ?>"></a> -->
 					<div class="col-sm-12 padding_all">
 						<div class="center_4 clearfix">
 							<div class="col-sm-4">
 								<div class="center_2">
-
-
 									<a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>"
-											width="100%"></a>
+											width="315%"></a>
 								</div>
 							</div>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							
 							<div class="col-sm-8">
 								<div class="center_3">
-									<h6><a href="#"><?= $value->tanggal;?></a>
-										<h3><a href="#"><?= $value->judul; ?> </a></h3>
-
+									
+									
+										<!-- <h3><a href="#"><?= $value->judul; ?> </a></h3> --><br>
+										<h6><a href="#"><?= $value->tanggal;?></a>
 										<h6><a href=""></a><?= ($value->isi); ?></h6>
 
 										<ul>

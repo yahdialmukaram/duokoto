@@ -54,12 +54,11 @@ class Model extends CI_Model
         return $this->db->get()->result();
         
     }
-    public function details_berita()
+    public function details_berita($id)
     {
-        $this->db->from('tb_berita');
+        $this->db->where('id',$id);
         $this->db->order_by('id', 'desc');
-
-        return $this->db->get()->result();
+        return $this->db->get('tb_berita')->result();
     }
     
 
