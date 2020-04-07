@@ -33,5 +33,14 @@ class C_user extends CI_Controller {
         $this->load->view('user/contact');
         $this->load->view('user/footer');
     }
+    public function details_berita()
+    {
+        $kode=$this->uri->segment(3);
+        $data['details'] = $this->Model->details_berita();
+        $this->load->view('user/header');
+        $this->load->view('user/details_berita',$data);
+        $this->load->view('user/footer');
+        // print_r($kode);
+    }
     
 }

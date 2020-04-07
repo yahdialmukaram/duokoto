@@ -23,8 +23,6 @@ class Model extends CI_Model
     } 
      function simpan_berita($object)
      {
-        // $hsl=$this->db->query("INSERT INTO tb_berita (judul,isi,image) VALUES ('$jdl','$berita','$gambar')");
-        // return $hsl;
         $this->db->insert('tb_berita', $object);
         
     }
@@ -56,7 +54,13 @@ class Model extends CI_Model
         return $this->db->get()->result();
         
     }
+    public function details_berita()
+    {
+        $this->db->from('tb_berita');
+        $this->db->order_by('id', 'desc');
+
+        return $this->db->get()->result();
+    }
     
 
 }
-

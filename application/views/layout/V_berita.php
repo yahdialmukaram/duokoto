@@ -41,6 +41,7 @@
 									<th>Judul</th>
 									<th>Image</th>
 									<th>Isi</th>
+									<th>Tanggal</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -51,14 +52,15 @@
 								<tr>
 									<td><?= $no++ ?></td>
 									<td><?=$value->judul; ?></td>
-									<td><img style="width: 100px;height: 100px;"
+									<td><img style="width: 100px;height: 100px; border-radius:50%"
 											src="<?=base_url();?>assets/images/<?=$value->image;?>"></td>
 									<td><?= $value->isi; ?></td>
+									<td><?= $value->tanggal; ?></td>
 									<td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"
-											class="btn btn-info btn-xs"> <i class="fa fa-edit"></i> Edit</a>
+											class="btn btn-info btn-xs"> <i class="fa fa-edit"></i> Edit </a>
 										<a href="<?php echo base_url(); ?>c_admin/hapus_berita/<?php echo $value->id; ?>"
-											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> Hapus</a>
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> Delete </a>
 									</td>
 								</tr>
 								<?php endforeach; ?>

@@ -62,7 +62,7 @@
 	  </div>
 	   <div class="col-sm-8">
 	  <div class="center_3">
-	  <h6><a href="#">DAPIBUS DIAM</a>, JANUARY 11, 2016</h6>
+	  <h6><a href="#"><?= $value->tanggal;?></a>
 	  <h3><a href="#"><?= $value->judul; ?> </a></h3>
 	  <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
 	  <a href="<?= base_url();?> home/<?= $value->id; ?>"> Selengkapnya</a>

@@ -105,7 +105,7 @@ class C_admin extends CI_Controller
         if (!empty($_FILES['filefoto']['name'])) {
             if ($this->upload->do_upload($name)) {
                 $gbr = $this->upload->data();
-                //Compress Image
+                // Compress Image
                 $config['image_library'] = 'gd2';
                 $config['source_image'] = './assets/images/' . $gbr['file_name'];
                 $config['create_thumb'] = false;
