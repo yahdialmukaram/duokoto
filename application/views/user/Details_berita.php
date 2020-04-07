@@ -50,29 +50,9 @@
 											width="315%"></a>
 								</div>
 							</div>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
 							
-							<div class="col-sm-8">
+							
+							<div class="col-sm-12">
 								<div class="center_3">
 									
 									

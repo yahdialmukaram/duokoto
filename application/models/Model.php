@@ -29,7 +29,7 @@ class Model extends CI_Model
     public function model_edit($id)
     {
         $this->db->where('id',$id);
-        return $this->db->get('tb_berita')->result();
+        return $this->db->get('tb_berita')->row_array();
     }
     public function model_edit_simpan($id,$data)
     {

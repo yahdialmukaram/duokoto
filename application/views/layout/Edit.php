@@ -20,21 +20,16 @@
 							<div class="col-md-8 col-md-offset-2">
 								<h3>Portal Berita</h3>
 								<hr />
-								<?php
-								foreach ($edit as $value): 
-								?>
-
-								<form action="<?php echo base_url();?>c_admin/simpan_edit/<?=$value->id ?>"
+								<form action="<?php echo base_url();?>c_admin/simpan_edit/<?=$edit['id'] ?>"
 									method="post" enctype="multipart/form-data">
-									<input type="text" name="judul" value="<?= $value->judul; ?>" class="form-control"
+									<input type="text" name="judul" value="<?= $edit['judul']; ?>" class="form-control"
 										placeholder="Judul berita" required /><br />
 									<textarea id="ckeditor" name="isi" class="form-control"
-										required><?= $value->isi;?></textarea><br />
-									<input type="file" name="filefoto" value="<?= $value->image;?>" ><br>
+										required><?= $edit['isi'];?></textarea><br />
+									<input type="file" name="filefoto" value="<?= $edit['image'];?>" ><br>
 									<button class="btn btn-primary btn-btn-xs" type="submit">Simpan</button>
 								</form>
 							</div>
-							<?php endforeach; ?>
 						</div>
 						<!-- tools box -->
 
