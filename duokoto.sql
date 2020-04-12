@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 04 Apr 2020 pada 14.47
--- Versi server: 10.1.31-MariaDB
--- Versi PHP: 7.2.3
+-- Host: localhost:3306
+-- Generation Time: Apr 12, 2020 at 03:07 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_berita`
+-- Table structure for table `tb_berita`
 --
 
 CREATE TABLE `tb_berita` (
@@ -37,7 +37,7 @@ CREATE TABLE `tb_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_berita`
+-- Dumping data for table `tb_berita`
 --
 
 INSERT INTO `tb_berita` (`id`, `judul`, `image`, `isi`, `tanggal`) VALUES
@@ -53,25 +53,58 @@ INSERT INTO `tb_berita` (`id`, `judul`, `image`, `isi`, `tanggal`) VALUES
 (66, 'corona di indosesia', '5e86f5a5486667ee51698babfd2b1307.png', '<p>corona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesia</p>\r\n', '2020-04-04 12:05:23'),
 (67, 'corona di indosesia', '6ac17153ff5358677f6ad18f68fd4078.jpg', '<p>corona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesiacorona di indosesia</p>\r\n', '2020-04-04 12:06:04');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id_user` int(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` text NOT NULL,
+  `level` varchar(50) NOT NULL,
+  `create_at` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_user`
+--
+
+INSERT INTO `tb_user` (`id_user`, `username`, `password`, `level`, `create_at`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '12-04-2020 14:43:30');
+
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `tb_berita`
+-- Indexes for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- Indexes for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_berita`
+-- AUTO_INCREMENT for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `tb_user`
+--
+ALTER TABLE `tb_user`
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

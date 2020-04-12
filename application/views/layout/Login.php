@@ -35,14 +35,19 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
-
-    <form action="<?= base_url();?>C_login/aksi_login/" method="post">
+    <?php if ($this->session->flashdata('error')):?>
+    <div class="alert alert-danger" role="alert">
+      <strong><?=$this->session->flashdata('error');
+      ?></strong>
+    </div>
+    <?php endif;?>
+    <form action="<?= base_url();?>C_login/verification/" method="post">
       <div class="form-group has-feedback">
         <input type="text" name="username" class="form-control" placeholder="Username">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="passwword" class="form-control" placeholder="Password">
+        <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
