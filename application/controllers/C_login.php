@@ -33,7 +33,7 @@ class C_login extends CI_Controller{
 
 			$this->session->set_userdata($data_session);
 
-			redirect('C_login');
+			redirect('c_admin');
             
 		}else{
             

@@ -19,7 +19,7 @@
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2">
 								<h3>Portal Berita</h3>
-								<hr />
+								
 								<form action="<?php echo base_url();?>c_admin/simpan_post/" method="post"enctype="multipart/form-data">
 									<input type="text" name="judul" class="form-control" placeholder="Judul berita"
 										required /><br />

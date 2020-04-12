@@ -73,6 +73,11 @@ class C_admin extends CI_Controller
 
         redirect('c_admin/v_berita');
     }
+    public function pageview()
+    {
+        $this->load->view('pageview');
+        
+    }
     public function simpan_post()
     {
 		// coding simpan di buat lebih simpal
