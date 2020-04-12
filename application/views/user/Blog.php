@@ -41,9 +41,8 @@
 							<div class="col-sm-8">
 								<div class="center_3">
 									<h6><a href="#"><?= $value->tanggal;?></a>
-									<h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?> </a></h3>
+				<h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?> </a></h3>
 									<h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
-									<a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"> Selengkapnya</a>
 									<ul>
 										<li class="well_5"><a href="#">Nisi</a></li>
 										<li class="well_5"><a href="#">Consectetur</a></li>

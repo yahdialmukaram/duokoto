@@ -35,6 +35,8 @@ class C_user extends CI_Controller {
     }
     public function details_berita($id)
     {
+        // $visitbulanini = $this->db->query("SELECT COUNT(hits) as total FROM statistik WHERE month(tanggal)='".date('m')."'")->row_array(); echo $visitbulanini['total'];
+        
         $kode=$this->uri->segment(3);
         $data['details'] = $this->Model->details_berita($id);
         $this->load->view('user/header');

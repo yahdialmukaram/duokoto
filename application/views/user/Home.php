@@ -63,9 +63,10 @@
 	   <div class="col-sm-8">
 	  <div class="center_3">
 	  <h6><a href="#"><?= $value->tanggal;?></a>
-	  <h3><a href="#"><?= $value->judul; ?> </a></h3>
+	  <h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?> </a></h3>
+	
 	  <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
-	  <a href="<?= base_url();?> home/<?= $value->id; ?>"> Selengkapnya</a>
+	  <!-- <a href="<?= base_url();?> home/<?= $value->id; ?>"> Selengkapnya</a> -->
 	  
 	  <ul>
 	      <li class="well_5"><a href="#">Nisi</a></li>
@@ -125,7 +126,7 @@
 	  <div class="col-sm-12 padding_all">
 	   <div class="col-sm-4 padding_all">
 	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/12.jpg"></a></p>
+	      <p><a href="#"><img src="<?= base_url();?>template/img/foto3.jpg" width="90%"></a></p>
 	     </div>
 	   </div>
 	   <div class="col-sm-8 padding_all">

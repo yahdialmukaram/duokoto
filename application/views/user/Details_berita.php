@@ -1,20 +1,18 @@
 <section id="center" class="clearfix">
 	<div class="container">
 		<div class="row">
-		<?php
-	 foreach ($details as $value ):?>
+			<?php
+			 foreach ($details as $value ):?>
 			<div class="col-sm-12 padding_all">
 				<div class="col-sm-8">
 					<div class="blog_1">
-						<ul>
-							<li><a href="#">Adipiscing</a></li>
-						</ul>
+
 						<h1><a href="#"><?= $value->judul; ?> </a></h1>
 					</div>
 					<div class="col-sm-12 padding_all">
 						<div class="col-sm-3 padding_all">
 							<div class="blog_2">
-							<h6><a href="#"><?= $value->tanggal;?></a>
+								<h6><a href="#"><?= $value->tanggal;?></a>
 							</div>
 						</div>
 						<div class="col-sm-7"></div>
@@ -33,15 +31,12 @@
 						<div class="col-sm-11 padding_all">
 							<div class="blog_5">
 								<ul>
-									<li class="well_7"><a href="#"><i class="fa fa-facebook"></i>Share</a></li>
-									<li class="well_8"><a href="#"><i class="fa fa-twitter"></i>Tweet</a></li>
+									<li class="well_7"><a href=""><i class="fa fa-facebook"></i>Share</a></li>
+									<li class="well_8"><a href=""><i class="fa fa-twitter"></i>Tweet</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
-
-			
-
 					<div class="col-sm-12 padding_all">
 						<div class="center_4 clearfix">
 							<div class="col-sm-4">
@@ -50,27 +45,35 @@
 											width="315%"></a>
 								</div>
 							</div>
-							
-							
 							<div class="col-sm-12">
 								<div class="center_3">
-									
-									
-										<!-- <h3><a href="#"><?= $value->judul; ?> </a></h3> --><br>
-										<h6><a href="#"><?= $value->tanggal;?></a>
-										<h6><a href=""></a><?= ($value->isi); ?></h6>
+									<!-- <h3><a href="#"><?= $value->judul; ?> </a></h3> -->
+									<br>
+									<!-- <h6><a href="#"><?= $value->tanggal;?></a> -->
+									<h6><a href=""></a><?= ($value->isi); ?></h6>
+									<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_whatsapp"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+									<br>
 
-										<ul>
-
-											<li class="well_5"><a href="#">Nisi</a></li>
-											<li class="well_5"><a href="#">Consectetur</a></li>
-											<li>100 <i class="fa fa-eye"></i></li>
-											<li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-										</ul>
+									<ul>
+										<li class="well_5"><a href="#">Nisi</a></li>
+										<li class="well_5"><a href="#">Consectetur</a></li>
+										<li>100 <i class="fa fa-eye"></i></li>
+										<li><a href="#">1</a> <i class="fa fa-comment"></i></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
+
 					<?php endforeach; ?>
 
 
