@@ -1,7 +1,26 @@
 <?php
 class Model extends CI_Model
 {
-
+    // fungsi untuk simpan data
+    public function create($table,$object)
+    {
+        $this->db->insert($table,$object);
+    }
+    // fungsi untuk menemukan data
+    public function find($table,$field,$field_name)
+    {
+        $this->db->from($table);
+        $this->db->where($field, $field_name);
+        return $this->db->get();
+    }
+    // check username dan password user
+    public function check_account($username,$password)
+    {
+        $this->db->from('tb_user');
+        $this->db->where('username', $username);
+        $this->db->where('password', $password);
+        return $this->db->get();
+    }
     public function tampil_data()
     {
         $this->db

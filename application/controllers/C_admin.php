@@ -9,6 +9,12 @@ class C_admin extends CI_Controller
         parent::__construct();
         $this->load->model('Model');
         $this->load->library('upload');
+        if ($this->session->userdata('level')!=='admin' or 
+        $this->session->userdata('logged_in')!==true
+        )  {
+            $this->session->set_flashdata('error', 'Anda tidak punya akses untuk menu tersebut');
+            redirect('c_login');
+        }
     }
 
     public function index()
