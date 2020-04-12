@@ -61,12 +61,12 @@ class C_login extends CI_Controller
         ];
         // check data sudah ada atau belum di database, biar data user nggak dempet
         // ambil data dari database berdasarkan username
-        $check_username = $this->Model->find('tb_user', 'username', $username);
+        $check_username = $this->Model->find('tb_admin', 'username', $username);
         // beri perintah if
         if ($check_username->num_rows() > 0) {
             $response = ['status' => 'username sudah terdaftar'];
         } else {
-            $this->Model->create('tb_user', $data);
+            $this->Model->create('tb_admin', $data);
             $response = ['status' => ' username berhasil di tambahkan'];
         }
         echo json_encode($response);
