@@ -151,62 +151,19 @@
 					</div>
 					<div class="center_main clearfix">
 
-						<div class="col-sm-12 padding_all">
-							<div class="col-sm-4 padding_all">
-								<div class="center_7">
-									<p><a href="#"><img src="img/12.jpg"></a></p>
-								</div>
-							</div>
-							<div class="col-sm-8 padding_all">
-								<div class="center_8">
-									<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-											odionec</a></h5>
-									<p>MARCH 3, 2017</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 padding_all">
-							<div class="col-sm-4 padding_all">
-								<div class="center_7">
-									<p><a href="#"><img src="img/13.jpg"></a></p>
-								</div>
-							</div>
-							<div class="col-sm-8 padding_all">
-								<div class="center_8">
-									<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-											odionec</a></h5>
-									<p>MARCH 3, 2017</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 padding_all">
-							<div class="col-sm-4 padding_all">
-								<div class="center_7">
-									<p><a href="#"><img src="img/14.jpg"></a></p>
-								</div>
-							</div>
-							<div class="col-sm-8 padding_all">
-								<div class="center_8">
-									<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-											odionec</a></h5>
-									<p>MARCH 3, 2017</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 padding_all">
-							<div class="col-sm-4 padding_all">
-								<div class="center_7">
-									<p><a href="#"><img src="img/15.jpg"></a></p>
-								</div>
-							</div>
-							<div class="col-sm-8 padding_all">
-								<div class="center_8">
-									<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-											odionec</a></h5>
-									<p>MARCH 3, 2017</p>
-								</div>
-							</div>
-						</div>
+<h2>Profil</h2>
+<input type="radio" name="Provinsi" value="Provinsi">provinsi : Sumatra Barat<br>
+<input type="radio" name="kabupaten" value="kabupaten">kabupaten : Tanah Datar<br>
+<input type="radio" name="kecamatan" value="kecamatan">kecamatan : Batipuh Selatan <br>
+<input type="radio" name="jumlah penduduk" value="jumlah penduduk">jumlah penduduk : 1200 jiwa<br>
+<input type="radio" name="jumlah_kk " value="jumlah kk">jumlah kk : 300 kk<br>
+<input type="radio" name="jumlah laki" value="jumlah laki">jumlah laki-laki : 500<br>
+<input type="radio" name="jumlah perempuan" value="jumlaj perempuan">jumlah prempuan : 683<br>
+<input type="radio" name="kondisi fisik" value="kondisi fisik">kondisi fisik : Perbukitan, Dataran<br>
+
+					
+				
+					
 					</div>
 
 				</div>

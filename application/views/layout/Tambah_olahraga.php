@@ -18,21 +18,14 @@
 						<a href="V_berita" class="btn btn-primary">Back</a>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2">
-								<h3>Portal Berita</h3>
-								
-								<form action="<?php echo base_url();?>c_admin/simpan_post/" method="post"enctype="multipart/form-data">
+								<h3>Berita Olahraga</h3>						
+                                <form action="<?php echo base_url();?>c_admin/simpan_olahraga/" method="post"enctype="multipart/form-data">
 									<input type="text" name="judul" class="form-control" placeholder="Judul berita"
 										required /><br />
-										<label>Kategori</label>
-										<select name="kategori" id="kategori" class="form-control">
-											<option value="0">--pilih--</option>
-											<option value="0">Berita</option>
-									<option value="0">Olahraga</option>
-								</select>
 									<textarea id="ckeditor" name="isi" class="form-control"
 										required></textarea><br />
 									<input type="file" name="filefoto" required><br>
-									<button class="btn btn-primary" type="submit">Post Berita</button>
+									<button class="btn btn-primary" type="submit">Post Olahraga</button>
 								</form>
 							</div>
 						</div>

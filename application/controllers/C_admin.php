@@ -139,4 +139,45 @@ class C_admin extends CI_Controller
         }
     }
 
+
+    // olahraga
+
+    public function tambah_olahraga()
+    {
+        $this->load->view('layout/header');
+        $this->load->view('layout/tambah_olahraga');
+        $this->load->view('layout/footer');
+    }
+    public function simpan_olahraga()
+    {
+        
+            // coding simpan di buat lebih simpal
+            $gambar = $this->upload('filefoto');
+            $jdl = $this->input->post('judul');
+            $isi = $this->input->post('isi');
+            if ($gambar['status'] == 'success') {
+                $object = [
+                    'judul' => $jdl,
+                    'isi' => $isi,
+                    'image' => $gambar['data'],
+                ];
+                $this->Model->simpan_berita($object);
+                $this->session->set_flashdata('success', 'Berita berhasil di simpan');
+                redirect('c_admin/V_berita');
+            }
+            else {
+                $this->session->set_flashdata('success', 'Data Gagal di upload');
+                redirect('c_admin/V_berita');
+            }
+        
+    }
+    public function V_berita_olahraga()
+    {
+        $data['tb_berita'] = $this->Model->tampil_data();
+
+        $this->load->view('layout/header');
+        $this->load->view('layout/V_berita_olahraga', $data);
+        $this->load->view('layout/footer');
+    }
+
 }

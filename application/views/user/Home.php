@@ -66,7 +66,7 @@
 	  <h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?> </a></h3>
 	
 	  <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
-	  <!-- <a href="<?= base_url();?> home/<?= $value->id; ?>"> Selengkapnya</a> -->
+
 	  
 	  <ul>
 	      <li class="well_5"><a href="#">Nisi</a></li>
@@ -121,110 +121,146 @@
 	 <div class="center_main clearfix">
 	  <div class="center_6">
 	   <p><a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a></p>
-	   <h3>Agenda</h3>
+	   <h3>Berita Olahraga</h3>
 	  </div>
+	  
+	  <?php
+	  foreach ($berita as $key => $value): ?>
 	  <div class="col-sm-12 padding_all">
 	   <div class="col-sm-4 padding_all">
 	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/foto3.jpg" width="90%"></a></p>
+	      <p> <a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>" width="100%"></a></p>
 	     </div>
 	   </div>
 	   <div class="col-sm-8 padding_all">
 	    <div class="center_8">
-		 <h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
+		 <h5><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?> </a></h5>
+		 <!-- <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6> -->
 		</div>
 	   </div>
 	  </div>
-	 
-	  <div class="col-sm-12 padding_all">
-	   <div class="col-sm-4 padding_all">
-	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/14.jpg"></a></p>
-	     </div>
-	   </div>
-	   <div class="col-sm-8 padding_all">
-	    <div class="center_8">
-		<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12 padding_all">
-	   <div class="col-sm-4 padding_all">
-	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/15.jpg"></a></p>
-	     </div>
-	   </div>
-	   <div class="col-sm-8 padding_all">
-	    <div class="center_8">
-		<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
-		</div>
-	   </div>
-	  </div>
+	  <?php endforeach; ?>
+	
+	
 	  <div class="col-sm-12 padding_all">
 	   <div class="center_9">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/16.jpg"></a></p>
+	      <p><a href="#"><img src="<?= base_url();?>template/img/foto2.jpg"width="100%"></a></p>
 	     </div> 
-	   <div class="center_6">
-	   <h3>SIGN IN</h3>
-	  </div>
-	   <div class="center_10">
-	    <p>Dignissim Lacinia</p>
-	   </div>
-	   <div class="center_11">
-	    <p><input type="text" name="Email" placeholder="Email Address" required=""></p>
-	   </div>
-	   <div class="center_12">
-	    <p><a href="#">Submit</a></p>
-	   </div>
+	 
+	
+	  
+	 
 	  </div>
 	 </div>
+	 
 	 <div class="center_main clearfix">
-	  <div class="center_6">
-	   <p><a href="#"><img src="<?= base_url();?>template/img/52.jpg" width="100%"></a></p>
-	   <h3>PRAESENT MAURIS</h3>
-	  </div>
-	  <div class="col-sm-12 padding_all">
-	   <div class="col-sm-4 padding_all">
-	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/12.jpg"></a></p>
-	     </div>
-	   </div>
-	   <div class="col-sm-8 padding_all">
-	    <div class="center_8">
-		 <h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12 padding_all">
-	   <div class="col-sm-4 padding_all">
-	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/13.jpg"></a></p>
-	     </div>
-	   </div>
-	   <div class="col-sm-8 padding_all">
-	    <div class="center_8">
-		 <h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12 padding_all">
-	   <div class="col-sm-4 padding_all">
-	     <div class="center_7">
-	      <p><a href="#"><img src="<?= base_url();?>template/img/14.jpg"></a></p>
-	     </div>
-	   </div>
-	   <div class="col-sm-8 padding_all">
-	    <div class="center_8">
-		<h5><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odionec</a></h5>
-		 <p>MARCH 3, 2017</p>
-		</div>
-	   </div>
-	  </div>
+	  <h3><b>Profil</b></h3>
+<input type="radio" name="Provinsi" value="Provinsi">provinsi    : Sumatra Barat<br>
+<input type="radio" name="kabupaten" value="kabupaten">kabupaten : Tanah Datar<br>
+<input type="radio" name="kecamatan" value="kecamatan">kecamatan : Batipuh Selatan <br>
+<input type="radio" name="jumlah penduduk" value="jumlah penduduk">jumlah penduduk : 1200 jiwa<br>
+<input type="radio" name="jumlah_kk " value="jumlah kk">jumlah kk : 300 kk<br>
+<input type="radio" name="jumlah laki" value="jumlah laki">jumlah laki-laki : 500<br>
+<input type="radio" name="jumlah perempuan" value="jumlaj perempuan">jumlah prempuan : 683<br>
+<input type="radio" name="kondisi fisik" value="kondisi fisik">kondisi fisik : Perbukitan, Dataran<br>
+<br>
+<br>
+<br>
+<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=id" type="text/javascript"></script>
+
+<script type="text/javascript">
+var geocoder = new google.maps.Geocoder();
+
+// http://cariprogram.blogspot.com
+// nuramijaya@gmail.com
+
+function initialize() {
+  var latLng = new google.maps.LatLng(-7.8, 110.3666667);
+  var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+    zoom: 12,
+    center: latLng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var marker = new google.maps.Marker({
+    position: latLng,
+    title: 'Ambarrukmo Plaza Yogyakarta',
+    map: map,
+    draggable: true
+  });
+
+ // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var marker1 = new google.maps.Marker({
+  position : pos,
+  animation:google.maps.Animation.BOUNCE,
+  title : 'lokasi',
+  //icon : 'assets/icon.png',
+  map : map,
+  draggable : true
+  });
+    map.setCenter(pos);
+    /*google.maps.event.addListener(marker1, 'drag', function() {
+   updateMarkerPosition(marker1.getPosition());
+  });
+  updateMarkerPosition(marker1.getPosition())*/  
+    }, function() {
+      //=handleNoGeolocation(true);
+        var marker1 = new google.maps.Marker({
+  position : latLng,
+  animation:google.maps.Animation.BOUNCE,
+  title : 'lokasi',
+//   icon : 'assets/icon.png',
+  map : map,
+  draggable : true
+  });
+   /*google.maps.event.addListener(marker1, 'drag', function() {
+   updateMarkerPosition(marker1.getPosition());
+  });
+  updateMarkerPosition(marker1.getPosition())*/
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    //=handleNoGeolocation(false);
+     var marker1 = new google.maps.Marker({
+  position : latLng,
+  animation:google.maps.Animation.BOUNCE,
+  title : 'lokasi',
+  //icon : 'assets/icon.png',
+  map : map,
+  draggable : true
+  });
+   /*google.maps.event.addListener(marker1, 'drag', function() {
+   updateMarkerPosition(marker1.getPosition());
+  });
+  updateMarkerPosition(marker1.getPosition())*/
+  }
+
+}
+
+// Onload handler to fire off the app.
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<style>
+  #mapCanvas {
+    width: 300px;
+    height: 350px;
+    float: left;
+  }
+</style>
+<br />
+<div id="mapCanvas"></div>
+	  <!-- </div> -->
+					
+
+	
+	 
+	
 	 </div>
 	</div>
    </div>

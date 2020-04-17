@@ -29,11 +29,6 @@ class Model extends CI_Model
         return $this->db->get()->result();
     }
 
-    // public function model_simpan($data)
-    // {
-    //     $this->db->insert('tb_berita',$data);
-    // }
-
     function model_hapus($id)
     {
         // ini model
@@ -79,6 +74,7 @@ class Model extends CI_Model
         $this->db->order_by('id', 'desc');
         return $this->db->get('tb_berita')->result();
     }
+    
     
 
 }

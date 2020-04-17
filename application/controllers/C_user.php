@@ -44,5 +44,10 @@ class C_user extends CI_Controller {
         $this->load->view('user/footer');
         // print_r($data);
     }
-    
+    public function olahraga()
+    {
+        
+        $this->load->view('user/olahraga', $data, FALSE);
+        
+    }
 }

@@ -6,8 +6,8 @@
 			Data Tables
 		</h1>
 		<br>
-		<a href="tambah" class="btn btn-primary fa fa-plus"> Tambah Berita</a>
-		<!-- <a href="tambah_olahraga" class="btn btn-primary fa fa-plus"> Tambah Berita Olahraga</a> -->
+		<!-- <a href="tambah" class="btn btn-primary fa fa-plus"> Tambah Berita</a> -->
+		<a href="tambah_olahraga" class="btn btn-primary fa fa-plus"> Tambah Berita Olahraga</a>
 
 	</section>
 
@@ -42,7 +42,6 @@
 									<th>Judul</th>
 									<th>Image</th>
 									<th>Isi</th>
-									<th>Kategori</th>
 									<th>Tanggal</th>
 									<th>Action</th>
 								</tr>
@@ -57,7 +56,6 @@
 									<td><img style="width: 100px;height: 100px; border-radius:50%"
 											src="<?=base_url();?>assets/images/<?=$value->image;?>"></td>
 									<td><?= $value->isi; ?></td>
-									<td><?= $value->kategori?></td>
 									<td><?= $value->tanggal; ?></td>
 									<td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"

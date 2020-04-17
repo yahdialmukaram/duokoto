@@ -5,6 +5,6 @@ class Hit_counter extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('hit_counter.php');
+		$this->load->view('hit_counter');
 	}
 }
