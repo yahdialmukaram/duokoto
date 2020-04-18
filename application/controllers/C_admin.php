@@ -90,20 +90,27 @@ class C_admin extends CI_Controller
         $gambar = $this->upload('filefoto');
         $jdl = $this->input->post('judul');
         $isi = $this->input->post('isi');
-        if ($gambar['status'] == 'success') {
-            $object = [
-                'judul' => $jdl,
-                'isi' => $isi,
-                'image' => $gambar['data'],
-            ];
-            $this->Model->simpan_berita($object);
-            $this->session->set_flashdata('success', 'Berita berhasil di simpan');
+        $kategori=$this->input->post('kategori');
+        if ($kategori=='0') {
+            $this->session->set_flashdata('success', 'Ketegori belum anda pilih');
             redirect('c_admin/V_berita');
-		}
-		else {
-			$this->session->set_flashdata('success', 'Data Gagal di upload');
-			redirect('c_admin/V_berita');
-		}
+        }else {
+            if ($gambar['status'] == 'success') {
+                $object = [
+                    'judul' => $jdl,
+                    'isi' => $isi,
+                    'image' => $gambar['data'],
+                    'kategori'=>$kategori,
+                ];
+                $this->Model->simpan_berita($object);
+                $this->session->set_flashdata('success', 'Berita berhasil di simpan');
+                redirect('c_admin/V_berita');
+            }
+            else {
+                $this->session->set_flashdata('success', 'Data Gagal di upload');
+                redirect('c_admin/V_berita');
+            }
+        }
 	}
 	// tambah kan fungsi upload  untuk semua
     public function upload($name)

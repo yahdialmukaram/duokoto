@@ -56,14 +56,14 @@ class C_login extends CI_Controller
         // sekarang check ke database ada tidak data dari username
         $check_username = $this->Model->check_account($username,hash('md5',$password));
         // jika tidak ada kembalikan ke login dan beri aler
-        if ($check_username->num_rows() == '0') {
+        if ($check_username->num_rows() == '0') {   //jika username di hitung sama dengan 0
             // beri alert dengan flash
             $this->session->set_flashdata('error', 'Maaf username yang anda gunakan tidak terdaftar');
             redirect('c_login');
         }
         // jika ada buat sesi login
         else {
-            $result = $check_username->row_array(); //ambil data dari database
+            $result = $check_username->row_array(); //ambil satu data dari database
             // buat array untuk session
             $ses_data = [
                 'username' => $result['username'],

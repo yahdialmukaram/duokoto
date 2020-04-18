@@ -35,7 +35,7 @@
 					</div>
 					<?php endif; ?>
 					<div class="box-body">
-						<table id="example2" class="table table-bordered table-hover">
+						<table id="example2" class="table table-bordered table-hover wrap">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -57,11 +57,11 @@
 									<td><img style="width: 100px;height: 100px; border-radius:50%"
 											src="<?=base_url();?>assets/images/<?=$value->image;?>"></td>
 									<td><?= $value->isi; ?></td>
-									<td><?= $value->kategori?></td>
+									<td><?= $value->kategori;?></td>
 									<td><?= $value->tanggal; ?></td>
 									<td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value->id; ?>"
-											class="btn btn-info btn-xs"> <i class="fa fa-edit"></i>  </a>
+											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>  </a>
 										<a href="<?php echo base_url(); ?>c_admin/hapus_berita/<?php echo $value->id; ?>"
 											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i>  </a>
 									</td>

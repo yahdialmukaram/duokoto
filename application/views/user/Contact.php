@@ -33,7 +33,10 @@
 	 </div>
 	 <div class="col-sm-6 padding_all">
         <section id="contact_main">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3635689.793072721!2d78.6421709625!3d27.141236999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1531201517392" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+         <iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31916.975867174817!2d100.4626923671211!3d-0.5684128234591842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5284bf464edb9%3A0x6ebabd399e3c647e!2sMalalo%2C%20Padang%20Laweh%20Malalo%2C%20Batipuh%20Selatan%2C%20Kabupaten%20Tanah%20Datar%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1587188947370!5m2!1sid!2sid"
+							width="600" height="500" frameborder="0" style="border:0;" allowfullscreen=""
+							aria-hidden="false" tabindex="0"></iframe>
         </section>
 	 </div>
 	</div>

@@ -60,10 +60,12 @@ class Model extends CI_Model
        return $this->db->get()->result();
         
     }
-    public function berita_home()
+    public function berita_home($ketegori)
     {
         $this->db->from('tb_berita');
         $this->db->order_by('id', 'desc');
+        $this->db->where('kategori', $ketegori);
+        
         $this->db->limit(5);
         return $this->db->get()->result();
         
@@ -74,7 +76,29 @@ class Model extends CI_Model
         $this->db->order_by('id', 'desc');
         return $this->db->get('tb_berita')->result();
     }
-    
+
+    public function data($number,$offset)
+    {
+		return $query = $this->db->get('tb_berita',$number,$offset)->result();		
+	}
+ 
+    public function jumlah_data()
+    {
+		return $this->db->get('tb_berita')->num_rows();
+    }
+    public function total_row_berita(Type $var = null)
+    {
+        $this->db->from('tb_berita');
+        $this->db->where('kategori', 'berita');
+        return $this->db->count_all_results();
+        
+    }
+    function get_berita_list($limit, $start){
+        $query = 
+        $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
+        return $query;
+    }
+
     
 
 }

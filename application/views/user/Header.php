@@ -37,7 +37,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-center">
-					<li class="active"><a href="<?= base_url();?>c_user/index/">Home</a></li>
+					<li class=""><a href="<?= base_url();?>c_user/index/">Home</a></li>
 					<li><a href="<?= base_url();?>c_user/blog/">Berita Terkini</a></li>
 					<li><a href="<?= base_url();?>c_user/gallery/">Gallery</a></li>
 					<li><a href="<?= base_url();?>c_user/contact/">Contact</a></li>

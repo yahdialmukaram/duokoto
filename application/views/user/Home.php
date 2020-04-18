@@ -54,8 +54,9 @@
 			 function limit_words($string, $word_limit){
 				 $words = explode(" ",$string);
 				 return implode(" ",array_splice($words,0,$word_limit));
-			 }
-				 foreach ($berita as $key => $value):?>
+				}
+				$no = $this->uri->segment('3') + 1;
+				 foreach ($data->result()as $key => $value):?>
 					<div class="col-sm-12 padding_all">
 						<div class="center_4 clearfix">
 							<div class="col-sm-4">
@@ -69,7 +70,7 @@
 									<h6><a href="#"><?= $value->tanggal;?></a>
 										<h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
 											</a></h3>
-										<h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6>
+										<h6><a href=""></a><?=limit_words($value->isi,30); ?></h6>
 										<ul>
 											<li class="well_5"><a href="#">Nisi</a></li>
 											<li class="well_5"><a href="#">Consectetur</a></li>
@@ -82,190 +83,133 @@
 					</div>
 					<?php endforeach; ?>
 					<!-- end -->
-
-
-					<div class="col-sm-12 padding_all">
-						<div class="center_4 clearfix">
-							<div class="col-sm-4">
-
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-12 padding_all">
-						<div class="center_4 clearfix">
-							<div class="col-sm-4">
-
-							</div>
-
-						</div>
-					</div>
-					<div class="col-sm-12 padding_all">
-						<div class="center_4 clearfix">
-							<div class="col-sm-4">
-
-							</div>
-
-						</div>
-					</div>
-					<div class="center_5 clearfix">
-						<ul>
-							<li class="well_6">1</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li>...</li>
-							<li><a href="#">111</a></li>
-							<li><a href="#">Next ></a></li>
-						</ul>
-					</div>
+					<!-- perintah pagination -->
+					<div class="row">
+        <div class="col">
+            <!--Tampilkan pagination-->
+            <?php echo $pagination; ?>
+        </div>
+    </div>
+     
 				</div>
 				<div class="col-sm-4">
 					<div class="center_main clearfix">
 						<div class="center_6">
-							<p><a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a></p>
+							<p><a href="#"><img src="<?= base_url();?>template/img/mesjid.jpeg" width="100%"></a></p>
 							<h3>Berita Olahraga</h3>
 						</div>
 
+
 						<?php
-	  foreach ($berita as $key => $value): ?>
+	  foreach ($berita_olahraga as $key => $value): ?>
 						<div class="col-sm-12 padding_all">
-							<div class="col-sm-4 padding_all">
+							<div class="col-sm-4  padding_all">
 								<div class="center_7">
 									<p> <a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>"
 												width="100%"></a></p>
+
 								</div>
 							</div>
-							<div class="col-sm-8 padding_all">
+							<div class="col-sm-7  padding_all">
 								<div class="center_8">
-									<h5><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
-										</a></h5>
-									<!-- <h6><a href=""></a><?= limit_words ($value->isi,50); ?></h6> -->
+									<div class="col-md-12">
+										<h5><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
+											</a></h5>
+									</div>
 								</div>
 							</div>
 						</div>
 						<?php endforeach; ?>
 
-
 						<div class="col-sm-12 padding_all">
-							<div class="center_9">
-								<p><a href="#"><img src="<?= base_url();?>template/img/foto2.jpg" width="100%"></a></p>
+							<div class="center_6">
+								<h3>Kepala Jorong</h3>
+								<p><a href="#"><img src="<?= base_url();?>template/img/yahdi.jpg" width="100%"
+											height="200%"></a></p>
 							</div>
-
-
-
-
 						</div>
 					</div>
+					<style>
+						.warna{
+							background-color: rgb(224, 178, 24);
+							color: black;
+						}
+						.warna1{
+							background-color: rgb(235, 165, 15);
+							color: black;
+						}
+	
+	
+					</style>
 
 					<div class="center_main clearfix">
-						<h3><b>Profil</b></h3>
-						<input type="radio" name="Provinsi" value="Provinsi">provinsi : Sumatra Barat<br>
-						<input type="radio" name="kabupaten" value="kabupaten">kabupaten : Tanah Datar<br>
-						<input type="radio" name="kecamatan" value="kecamatan">kecamatan : Batipuh Selatan <br>
-						<input type="radio" name="jumlah penduduk" value="jumlah penduduk">jumlah penduduk : 1200
-						jiwa<br>
-						<input type="radio" name="jumlah_kk " value="jumlah kk">jumlah kk : 300 kk<br>
-						<input type="radio" name="jumlah laki" value="jumlah laki">jumlah laki-laki : 500<br>
-						<input type="radio" name="jumlah perempuan" value="jumlaj perempuan">jumlah prempuan : 683<br>
-						<input type="radio" name="kondisi fisik" value="kondisi fisik">kondisi fisik : Perbukitan,
-						Dataran<br>
-						<br>
-						<br>
-						<br>
-						<script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=id"
-							type="text/javascript"></script>
+						<h3><b>Profil Jorong</b></h3>
+						<table rules="rows">					
+		
+		<tr class="warna">
+        <th>Provinsi</th>
+		<td></td>
+		<td></td>
+        <td>Sumatra Barat</td>
+	</tr>
 
-						<script type="text/javascript">
-							var geocoder = new google.maps.Geocoder();
-
-							// http://cariprogram.blogspot.com
-							// nuramijaya@gmail.com
-
-							function initialize() {
-								var latLng = new google.maps.LatLng(-7.8, 110.3666667);
-								var map = new google.maps.Map(document.getElementById('mapCanvas'), {
-									zoom: 12,
-									center: latLng,
-									mapTypeId: google.maps.MapTypeId.ROADMAP
-								});
-
-								var marker = new google.maps.Marker({
-									position: latLng,
-									title: 'Ambarrukmo Plaza Yogyakarta',
-									map: map,
-									draggable: true
-								});
-
-								// Try HTML5 geolocation
-								if (navigator.geolocation) {
-									navigator.geolocation.getCurrentPosition(function (position) {
-										var pos = new google.maps.LatLng(position.coords.latitude,
-											position.coords.longitude);
-
-										var marker1 = new google.maps.Marker({
-											position: pos,
-											animation: google.maps.Animation.BOUNCE,
-											title: 'lokasi',
-											//icon : 'assets/icon.png',
-											map: map,
-											draggable: true
-										});
-										map.setCenter(pos);
-										/*google.maps.event.addListener(marker1, 'drag', function() {
-   updateMarkerPosition(marker1.getPosition());
-  });
-  updateMarkerPosition(marker1.getPosition())*/
-									}, function () {
-										//=handleNoGeolocation(true);
-										var marker1 = new google.maps.Marker({
-											position: latLng,
-											animation: google.maps.Animation.BOUNCE,
-											title: 'lokasi',
-											//   icon : 'assets/icon.png',
-											map: map,
-											draggable: true
-										});
-										/*google.maps.event.addListener(marker1, 'drag', function() {
-   updateMarkerPosition(marker1.getPosition());
-  });
-  updateMarkerPosition(marker1.getPosition())*/
-									});
-								} else {
-									// Browser doesn't support Geolocation
-									//=handleNoGeolocation(false);
-									var marker1 = new google.maps.Marker({
-										position: latLng,
-										animation: google.maps.Animation.BOUNCE,
-										title: 'lokasi',
-										//icon : 'assets/icon.png',
-										map: map,
-										draggable: true
-									});
-									/*google.maps.event.addListener(marker1, 'drag', function() {
-   updateMarkerPosition(marker1.getPosition());
-  });
-  updateMarkerPosition(marker1.getPosition())*/
-								}
-
-							}
-
-							// Onload handler to fire off the app.
-							google.maps.event.addDomListener(window, 'load', initialize);
-
-						</script>
-
-						<style>
-							#mapCanvas {
-								width: 300px;
-								height: 350px;
-								float: left;
-							}
-
-						</style>
-						<br />
-						<div id="mapCanvas"></div>
-						<!-- </div> -->
-
+    <tr>
+     	<th>Kabupaten</th>
+		<td></td>
+		<td></td>
+        <td>Tanah Datar</td>
+	</tr>
+	<tr>
+     	<th>Kecamatan</th>
+		<td></td>
+		<td></td>
+        <td>Batipuh Selatan</td>
+	</tr>
+	<tr>
+     	<th>Jorong</th>
+		<td></td>
+		<td></td>
+        <td>Duo Koto Malalo</td>
+	</tr>
+	<tr>
+     	<th>Jumlah Penduduk</th>
+		<td></td>
+		<td></td>
+        <td>1200 Jiwa</td>
+    </tr>
+	<tr>
+     	<th>Jumlah KK</th>
+		<td></td>
+		<td></td>
+        <td>500 KK</td>
+    </tr>
+	<tr>
+     	<th>Jumlah Laki-Laki</th>
+		<td></td>
+		<td></td>
+        <td>400 Jiwa</td>
+	</tr>
+	<tr>
+     	<th>Jumlah Prempuan</th>
+		<td></td>
+		<td></td>
+        <td>679 Jiwa</td>
+	</tr>
+	<tr>
+     	<th>Kondisi Fisik</th>
+		<td></td>
+		<td></td>
+        <td>Perbukitan, Dataran</td>
+	</tr>
+	  
+</table>
+<br>
+<br>
+				
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31916.975867174817!2d100.4626923671211!3d-0.5684128234591842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5284bf464edb9%3A0x6ebabd399e3c647e!2sMalalo%2C%20Padang%20Laweh%20Malalo%2C%20Batipuh%20Selatan%2C%20Kabupaten%20Tanah%20Datar%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1587188947370!5m2!1sid!2sid"
+							width="300" height="280" frameborder="0" style="border:0;" allowfullscreen=""
+							aria-hidden="false" tabindex="0"></iframe>
 
 
 
