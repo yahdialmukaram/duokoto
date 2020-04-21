@@ -348,6 +348,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="<?= base_url();?>C_admin/V_berita"><i class="fa  fa-circle-o"></i> Daftar Berita</a></li>
+            <li class="active"><a href="<?= base_url();?>C_admin/V_saran"><i class="fa  fa-circle-o"></i> Saran User</a></li>
            
           </ul>
         </li>

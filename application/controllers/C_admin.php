@@ -34,6 +34,14 @@ class C_admin extends CI_Controller
         $this->load->view('layout/footer');
 
     }
+    public function V_saran()
+    {
+        $data['tb_saran'] = $this->Model->tampil_saran();
+
+        $this->load->view('layout/header');
+        $this->load->view('layout/V_saran', $data);
+        $this->load->view('layout/footer');
+    }
 
     public function tambah()
     {

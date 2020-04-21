@@ -15,11 +15,17 @@
 	
    <script src="<?= base_url();?>template/js/jquery-2.1.1.min.js"></script>
     <script src="<?= base_url();?>template/js/bootstrap.min.js"></script>
+	
+</head>
 
-  </head>
-  
 
 <body>
+	
+<!-- star komen facebook -->
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v6.0"></script>
+<!-- end komentar -->
+
 <section id="header">
  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container">

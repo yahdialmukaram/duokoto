@@ -28,16 +28,29 @@ class Model extends CI_Model
         ->order_by('id', 'desc');
         return $this->db->get()->result();
     }
+    public function tampil_saran()
+    {
+       return $this->db->get('tb_saran')->result_array();
+      
+        
+        
+        
+    }
 
-    function model_hapus($id)
+    public function model_hapus($id)
     {
         // ini model
     $this->db->where('id',$id);
     $this->db->delete('tb_berita');
     } 
-     function simpan_berita($object)
+   public function simpan_berita($object)
      {
         $this->db->insert('tb_berita', $object);
+        
+    }
+    public function simpan_saran($data)
+    {
+        $this->db->insert('tb_saran', $data);
         
     }
     public function model_edit($id)
@@ -94,9 +107,27 @@ class Model extends CI_Model
         
     }
     function get_berita_list($limit, $start){
-        $query = 
-        $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
+        $query = $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
         return $query;
+    }
+    
+    
+    function pengunjung()
+    {
+        return $this->db->query("SELECT * FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY ip");
+    }
+    function totalpengunjung(){
+        return $this->db->query("SELECT COUNT(hits) as total FROM tb_pengunjung");
+    }
+    function hits(){
+        return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY tanggal");
+    }
+    function totalhits(){
+        return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung");
+    }
+    function pengunjungonline(){
+        $bataswaktu       = time() - 300;
+        return $this->db->query("SELECT * FROM statistik WHERE online > '$bataswaktu'");
     }
 
     

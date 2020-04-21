@@ -33,6 +33,7 @@
 								</div>
 							</div>
 
+
 							<!-- Controls -->
 							<a class="left carousel-control"
 								href="http://bootsnipp-env.elasticbeanstalk.com/iframe/xBdN#carousel-example-generic"
@@ -67,16 +68,19 @@
 							</div>
 							<div class="col-sm-8">
 								<div class="center_3">
-									<h6><a href="#"><?= $value->tanggal;?></a>
-										<h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
-											</a></h3>
-										<h6><a href=""></a><?=limit_words($value->isi,30); ?></h6>
-										<ul>
-											<li class="well_5"><a href="#">Nisi</a></li>
-											<li class="well_5"><a href="#">Consectetur</a></li>
-											<li>100 <i class="fa fa-eye"></i></li>
-											<li><a href="#">1</a> <i class="fa fa-comment"></i></li>
-										</ul>
+								<!-- <php echo format_indo(date('Y-m-d H:i:s'));?> -->
+									<h6><a href="#"><?= $value->tanggal;?></a></h6>
+									<h3><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
+										</a></h3>
+									<h6><a href=""></a><?=limit_words($value->isi,30); ?></h6>
+
+									<ul>
+										<li class="well_5"><a href="#">Nisi</a></li>
+										<li class="well_5"><a href="">Consectetur</a></li>
+										<li>100 <i class="fa fa-eye"></i></li>
+										<li><a href="#">1</a> <i class="fa fa-comment"></i></li>
+									</ul>
+
 								</div>
 							</div>
 						</div>
@@ -85,12 +89,12 @@
 					<!-- end -->
 					<!-- perintah pagination -->
 					<div class="row">
-        <div class="col">
-            <!--Tampilkan pagination-->
-            <?php echo $pagination; ?>
-        </div>
-    </div>
-     
+						<div class="col">
+							<!--Tampilkan pagination-->
+							<!-- <php echo $pagination; ?> -->
+						</div>
+					</div>
+
 				</div>
 				<div class="col-sm-4">
 					<div class="center_main clearfix">
@@ -108,6 +112,7 @@
 									<p> <a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>"
 												width="100%"></a></p>
 
+
 								</div>
 							</div>
 							<div class="col-sm-7  padding_all">
@@ -123,93 +128,97 @@
 
 						<div class="col-sm-12 padding_all">
 							<div class="center_6">
-								<h3>Kepala Jorong</h3>
+								<table class="table table-dark">
+									<tbody>
+										<h3>Kepala Jorong</h3>
+									</tbody>
+								</table>
+
 								<p><a href="#"><img src="<?= base_url();?>template/img/yahdi.jpg" width="100%"
 											height="200%"></a></p>
 							</div>
 						</div>
 					</div>
 					<style>
-						.warna{
+						.warna {
 							background-color: rgb(224, 178, 24);
 							color: black;
 						}
-						.warna1{
-							background-color: rgb(235, 165, 15);
+
+						.warna1 {
 							color: black;
 						}
-	
-	
+
 					</style>
 
 					<div class="center_main clearfix">
 						<h3><b>Profil Jorong</b></h3>
-						<table rules="rows">					
-		
-		<tr class="warna">
-        <th>Provinsi</th>
-		<td></td>
-		<td></td>
-        <td>Sumatra Barat</td>
-	</tr>
+						<table rules="rows">
 
-    <tr>
-     	<th>Kabupaten</th>
-		<td></td>
-		<td></td>
-        <td>Tanah Datar</td>
-	</tr>
-	<tr>
-     	<th>Kecamatan</th>
-		<td></td>
-		<td></td>
-        <td>Batipuh Selatan</td>
-	</tr>
-	<tr>
-     	<th>Jorong</th>
-		<td></td>
-		<td></td>
-        <td>Duo Koto Malalo</td>
-	</tr>
-	<tr>
-     	<th>Jumlah Penduduk</th>
-		<td></td>
-		<td></td>
-        <td>1200 Jiwa</td>
-    </tr>
-	<tr>
-     	<th>Jumlah KK</th>
-		<td></td>
-		<td></td>
-        <td>500 KK</td>
-    </tr>
-	<tr>
-     	<th>Jumlah Laki-Laki</th>
-		<td></td>
-		<td></td>
-        <td>400 Jiwa</td>
-	</tr>
-	<tr>
-     	<th>Jumlah Prempuan</th>
-		<td></td>
-		<td></td>
-        <td>679 Jiwa</td>
-	</tr>
-	<tr>
-     	<th>Kondisi Fisik</th>
-		<td></td>
-		<td></td>
-        <td>Perbukitan, Dataran</td>
-	</tr>
-	  
-</table>
-<br>
-<br>
-				
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31916.975867174817!2d100.4626923671211!3d-0.5684128234591842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd5284bf464edb9%3A0x6ebabd399e3c647e!2sMalalo%2C%20Padang%20Laweh%20Malalo%2C%20Batipuh%20Selatan%2C%20Kabupaten%20Tanah%20Datar%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1587188947370!5m2!1sid!2sid"
-							width="300" height="280" frameborder="0" style="border:0;" allowfullscreen=""
-							aria-hidden="false" tabindex="0"></iframe>
+							<tr class="warna">
+								<th>Provinsi</th>
+								<td></td>
+								<td></td>
+								<td>Sumatra Barat</td>
+							</tr>
+
+							<tr>
+								<th>Kabupaten</th>
+								<td></td>
+								<td></td>
+								<td>Tanah Datar</td>
+							</tr>
+							<tr>
+								<th>Kecamatan</th>
+								<td></td>
+								<td></td>
+								<td>Batipuh Selatan</td>
+							</tr>
+							<tr>
+								<th>Jorong</th>
+								<td></td>
+								<td></td>
+								<td>Duo Koto Malalo</td>
+							</tr>
+							<tr>
+								<th>Jumlah Penduduk</th>
+								<td></td>
+								<td></td>
+								<td>1200 Jiwa</td>
+							</tr>
+							<tr>
+								<th>Jumlah KK</th>
+								<td></td>
+								<td></td>
+								<td>500 KK</td>
+							</tr>
+							<tr>
+								<th>Jumlah Laki-Laki</th>
+								<td></td>
+								<td></td>
+								<td>400 Jiwa</td>
+							</tr>
+							<tr>
+								<th>Jumlah Prempuan</th>
+								<td></td>
+								<td></td>
+								<td>679 Jiwa</td>
+							</tr>
+							<tr>
+								<th>Kondisi Fisik</th>
+								<td></td>
+								<td></td>
+								<td>Perbukitan, Dataran</td>
+							</tr>
+
+						</table>
+
+						<br>
+						<br>
+
+					
+
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d866.2332583338343!2d100.484131!3d-0.588236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2110432d565ec490!2sMasjid%20Mujahidin!5e1!3m2!1sid!2sid!4v1587417005557!5m2!1sid!2sid" width="300" height="280" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 
 
