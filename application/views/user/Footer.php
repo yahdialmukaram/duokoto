@@ -98,6 +98,15 @@
 <script src="<?= base_url();?>template/js/cbpAnimatedHeader.js"></script>
 <script src="<?= base_url();?>template/js/classie.js"></script> 
 
+<script>    
+$('#example2').DataTable()
+window.setTimeout(function(){
+  $("#pesan").fadeTo(1000,0).slideUp(500,function () { 
+    $(this).remove();
+   });
+}, 6000);
+</script>
+
 <!--komen Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

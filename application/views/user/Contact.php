@@ -10,6 +10,15 @@
 	    <h4>KRITIK DAN SARAN:</h4>
 		<p>Silahkan Masukan Kritik dan Saran Dunsanak</p>
 	   </div>
+
+	   <!-- aler simpan saran user -->
+	   <?php if ($this->session->flashdata('success')):?>
+					<div id="pesan" class="alert alert-success" role="alert">
+						<strong><?=$this->session->flashdata('success');
+						?></strong>
+					</div>
+					<?php endif;?>
+
 	   <form action="<?= base_url();?>c_user/simpan_saran/" method="POST">
 	  <div class="col-sm-12 drop_2 clearfix">
 	   <div class="col-sm-4 drop_2">
@@ -26,9 +35,8 @@
 	   <div class="contact_6"><textarea name="pesan" placeholder="message" required=""></textarea></div>
 	   <div class="contact_7">
 	     <ul>
-			 <li>SEND</li>
-			 <button class="btn btn-primary" type="submit">Kirim Saran</button>
-			<li>CLEAR</li>
+			 <li>	 <button class="bnt btn-primary" type="submit">Kirim Saran</button></li>
+		
 		 </ul>
 		</form>
 	   </div>

@@ -43,6 +43,7 @@ class Model extends CI_Model
     $this->db->where('id',$id);
     $this->db->delete('tb_berita');
     } 
+
    public function simpan_berita($object)
      {
         $this->db->insert('tb_berita', $object);
@@ -52,6 +53,23 @@ class Model extends CI_Model
     {
         $this->db->insert('tb_saran', $data);
         
+    }
+    public function hapus_saran($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('tb_saran');
+        
+    }
+    public function model_details($id)
+    {
+        //  $data = $this->db->get_where('tb_saran', array('id' =>$id))->row_array();
+        // return $data;
+        
+        // $this->db->select('*');
+        // $this->db->from('tb_saran');
+        
+        $this->db->where('id',$id);
+        return $this->db->get_where('tb_saran')->row_array();
     }
     public function model_edit($id)
     {

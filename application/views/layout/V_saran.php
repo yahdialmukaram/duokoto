@@ -6,7 +6,7 @@
 			Data Tables
 		</h1>
 		<br>
-	
+
 
 	</section>
 
@@ -20,7 +20,7 @@
 					</div>
 
 					<!-- alert simpan data -->
-			
+
 					<!-- aler hapus data -->
 					<?php if ($this->session->flashdata('danger')):?>
 					<div id="pesan" class="alert alert-danger" role="alert">
@@ -37,7 +37,7 @@
 									<th>Email</th>
 									<th>No Hp</th>
 									<th>Pesan</th>
-								<th>tanggal</th>
+									<th>tanggal</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -48,16 +48,16 @@
 								<tr>
 									<td><?= $no++ ?></td>
 									<td><?=$value['nama']; ?></td>
-								
 									<td><?= $value['email']; ?></td>
 									<td><?= $value['no_hp'];?></td>
 									<td><?= $value['pesan']; ?></td>
 									<td><?= $value['tanggal']; ?></td>
 									<td>
-										<a href="<?php echo base_url(); ?>c_admin/edit_berita/<?php echo $value['id']; ?>"
-											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i>  </a>
-										<a href="<?php echo base_url(); ?>c_admin/hapus_berita/<?php echo $value['id']; ?>"
-											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i>  </a>
+										<a href="<?php echo base_url(); ?>/c_admin/details_user/<?php echo $value['id']; ?>"
+											class="btn btn-primary btn-xs"> <i class="fa fa-search-plus"></i> Details
+										</a>
+										<a href="<?php echo base_url(); ?>/c_admin/delete_saran/<?php echo $value['id']; ?>"
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash">Delete</i> </a>
 									</td>
 								</tr>
 								<?php endforeach; ?>
@@ -68,8 +68,6 @@
 					<!-- /.box-body -->
 				</div>
 				<!-- /.box -->
-
-
 			</div>
 			<!-- /.col -->
 		</div>

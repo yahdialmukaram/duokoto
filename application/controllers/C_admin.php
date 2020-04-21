@@ -42,6 +42,23 @@ class C_admin extends CI_Controller
         $this->load->view('layout/V_saran', $data);
         $this->load->view('layout/footer');
     }
+    public function delete_saran($id)
+    {
+        $this->Model->hapus_saran($id);
+        $this->session->set_flashdata('danger', 'Data telah di hapus');
+
+        redirect('c_admin/v_saran');
+        
+    }
+    public function details_user($id)
+    {
+        $data['details'] = $this->Model->model_details($id);
+        $this->load->view('layout/header');
+        $this->load->view('layout/details_user', $data);
+        $this->load->view('layout/footer');
+        // print_r($data);
+      
+    }
 
     public function tambah()
     {
@@ -49,7 +66,7 @@ class C_admin extends CI_Controller
         $this->load->view('layout/tambah');
         $this->load->view('layout/footer');
 
-    }
+}
     public function edit_berita($id)
     {
         $data['edit'] = $this->Model->model_edit($id);

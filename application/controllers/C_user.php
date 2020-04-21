@@ -191,6 +191,5 @@ class C_user extends CI_Controller {
      
             redirect('c_user/contact');
               
-           
        }
 }
