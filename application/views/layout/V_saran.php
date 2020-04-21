@@ -37,7 +37,7 @@
 									<th>Email</th>
 									<th>No Hp</th>
 									<th>Pesan</th>
-									<th>tanggal</th>
+									<th>Tanggal</th>
 									<th>Action</th>
 								</tr>
 							</thead>
@@ -47,17 +47,17 @@
            					 foreach ($tb_saran as $value): ?>
 								<tr>
 									<td><?= $no++ ?></td>
-									<td><?=$value['nama']; ?></td>
+									<td><?= $value['nama']; ?></td>
 									<td><?= $value['email']; ?></td>
 									<td><?= $value['no_hp'];?></td>
 									<td><?= $value['pesan']; ?></td>
 									<td><?= $value['tanggal']; ?></td>
 									<td>
 										<a href="<?php echo base_url(); ?>/c_admin/details_user/<?php echo $value['id']; ?>"
-											class="btn btn-primary btn-xs"> <i class="fa fa-search-plus"></i> Details
+											class="btn btn-primary btn-xs"> <i class="fa fa-search-plus"></i> 
 										</a>
 										<a href="<?php echo base_url(); ?>/c_admin/delete_saran/<?php echo $value['id']; ?>"
-											class="btn btn-danger btn-xs"> <i class="fa fa-trash">Delete</i> </a>
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> </a>
 									</td>
 								</tr>
 								<?php endforeach; ?>

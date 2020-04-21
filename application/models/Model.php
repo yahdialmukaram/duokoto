@@ -30,7 +30,10 @@ class Model extends CI_Model
     }
     public function tampil_saran()
     {
-       return $this->db->get('tb_saran')->result_array();
+        $this->db->from('tb_saran');
+        $this->db->order_by('id', 'desc');
+        
+       return $this->db->get()->result_array();
       
         
         

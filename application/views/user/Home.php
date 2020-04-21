@@ -152,7 +152,7 @@
 					</style>
 
 					<div class="center_main clearfix">
-						<h3><b>Profil Jorong</b></h3>
+						<h3>Profil Jorong</h3>
 						<table rules="rows">
 
 							<tr class="warna">
@@ -217,7 +217,7 @@
 						<br>
 
 					
-
+						<h3>Lokasi</h3>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d866.2332583338343!2d100.484131!3d-0.588236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2110432d565ec490!2sMasjid%20Mujahidin!5e1!3m2!1sid!2sid!4v1587417005557!5m2!1sid!2sid" width="300" height="280" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 

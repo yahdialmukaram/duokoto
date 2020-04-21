@@ -138,10 +138,7 @@ class C_user extends CI_Controller {
         $this->load->view('user/footer');
         // print_r($data);
     }
-    // public function olahraga()
-    // {  
-    //     $this->load->view('user/olahraga', $data, FALSE);
-    // }
+
     public function hit_counter($id)
     {
         // $this->load->view('user/home', $id);
@@ -178,17 +175,16 @@ class C_user extends CI_Controller {
         $email = $this->input->post('email');
         $no_hp = $this->input->post('no_hp');
         $pesan = $this->input->post('pesan');
+        $tanggal = $this->input->post('tanggal');
            $data = [
-                    'nama' => $nama,
+                    'nama'  => $nama,
                     'email' => $email,
                     'no_hp' => $no_hp,
                     'pesan' => $pesan,
                     'tanggal' => date('d-m-Y H:i:s'),
 		   ];
            $this->Model->simpan_saran($data);
-           
            $this->session->set_flashdata('success', 'Saran Berhasil di Kirim');
-     
             redirect('c_user/contact');
               
        }
