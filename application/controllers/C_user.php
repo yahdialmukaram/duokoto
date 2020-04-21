@@ -178,18 +178,13 @@ class C_user extends CI_Controller {
         $email = $this->input->post('email');
         $no_hp = $this->input->post('no_hp');
         $pesan = $this->input->post('pesan');
-        $tanggal = $this->input->post('tanggal');
-
-        redirect('c_user/contact');
-
            $data = [
                     'nama' => $nama,
                     'email' => $email,
                     'no_hp' => $no_hp,
                     'pesan' => $pesan,
-                    'tanggal' => $tanggal,
-           ];
-
+                    'tanggal' => date('d-m-Y H:i:s'),
+		   ];
            $this->Model->simpan_saran($data);
            
            $this->session->set_flashdata('success', 'Saran Berhasil di Kirim');
