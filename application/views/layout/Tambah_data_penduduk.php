@@ -25,12 +25,6 @@
 
 					<form class="form-horizontal" action="<?= base_url();?>C_admin/simpan_data_penduduk" method="post">
 						<div class="box-body">
-
-						
-
-
-
-
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Nik</label>
 								<div class="col-sm-10 col-md-6">

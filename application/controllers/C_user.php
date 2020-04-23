@@ -9,8 +9,7 @@ class C_user extends CI_Controller {
             $this->load->library('pagination');
     
         }
-     
-
+    
 	public function index()
 	{
         $this->load->library('pagination');
@@ -76,7 +75,7 @@ class C_user extends CI_Controller {
         $this->load->library('pagination');
         $config['base_url'] = site_url('c_user/index'); //site url
         $config['total_rows'] = $this->Model->total_row_berita(); //total row
-        $config['per_page'] = 4;  //show record per halaman
+        $config['per_page'] = 5;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);

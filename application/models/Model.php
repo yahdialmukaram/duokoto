@@ -90,7 +90,7 @@ class Model extends CI_Model
     {
         $this->db->from('tb_berita');
         $this->db->order_by('id', 'desc');
-        $this->db->limit(5);
+        $this->db->limit(7);
        return $this->db->get()->result();
         
     }
