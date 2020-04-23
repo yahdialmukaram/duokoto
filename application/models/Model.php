@@ -150,6 +150,16 @@ class Model extends CI_Model
         $bataswaktu       = time() - 300;
         return $this->db->query("SELECT * FROM statistik WHERE online > '$bataswaktu'");
     }
+    public function tampil_data_penduduk()
+    {
+       return $this->db->get('tb_penduduk')->result_array();
+        
+    }
+    public function simpan_data_penduduk($data)
+    {
+        $this->db->insert('tb_penduduk', $data);
+        
+    }
 
     
 

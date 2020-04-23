@@ -163,7 +163,7 @@ class C_admin extends CI_Controller
                 $response['status'] = 'success';
                 return $response;
             } else {
-                $response['status'] = 'rrror';
+                $response['status'] = 'erroe';
                 return $response;
                 // redirect('c_admin/V_berita');
             }
@@ -211,5 +211,53 @@ class C_admin extends CI_Controller
         $this->load->view('layout/V_berita_olahraga', $data);
         $this->load->view('layout/footer');
     }
+    public function tambah_data_penduduk()
+    {
+        
+        $this->load->view('layout/header');
+        $this->load->view('layout/tambah_data_penduduk');
+        $this->load->view('layout/footer');
+    }
+
+    public function data_penduduk()
+    {
+
+        $data ['tb_penduduk'] = $this->Model->tampil_data_penduduk();
+
+        $this->load->view('layout/header');
+        $this->load->view('layout/data_penduduk', $data);
+        $this->load->view('layout/footer');
+
+    }
+    public function simpan_data_penduduk()
+    {
+        
+        $data = array(
+            'nik'             => $this->input->post('nik'),
+            'nama'            => $this->input->post('nama'),
+            'tgl_lahir'    => $this->input->post('tgl_lahir'),
+            'jenis_kelmain'   => $this->input->post('jenis_kelamin'),
+            'alamat'          => $this->input->post('alamat'),
+            'agama'           => $this->input->post('agama'),
+            'status_perkawinan'=> $this->input->post('status_perkawinan'),
+            'pekerjaan'       => $this->input->post('pekerjaan'),
+            'kewarganegaraan' => $this->input->post('kewarganegaraan'),
+            'image'            => $this->input->post('image'),
+            // if ($gambar['status']=='success') {
+                //     # code...
+                // }
+                
+            );
+            $this->Model->simpan_data_penduduk($data);
+            $this->load->view('layout/header');
+        $this->load->view('layout/footer');
+        
+        redirect('c_admin/data_penduduk');
+        
+        // print_r($data);
+        
+        
+        
+        }
 
 }

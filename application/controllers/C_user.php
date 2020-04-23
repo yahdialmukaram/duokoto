@@ -54,9 +54,8 @@ class C_user extends CI_Controller {
         $this->load->view('user/header');		
         $this->load->view('user/home',$data);
         $this->load->view('user/footer');
-        // print_r($data);
-		// $this->load->view('layout/footer');		
-// redirect('c_user');
+      	
+
     }
     public function pengunjung()
     {
@@ -139,35 +138,35 @@ class C_user extends CI_Controller {
         // print_r($data);
     }
 
-    public function hit_counter($id)
-    {
-        // $this->load->view('user/home', $id);
-        $data['details'] = $this->Model->details_berita($id);
-        $this->load->view('user/header');
-        $this->load->view('user/details_berita',$data);
-        $this->load->view('user/footer');
+    // public function hit_counter($id)
+    // {
+    //     // $this->load->view('user/home', $id);
+    //     $data['details'] = $this->Model->details_berita($id);
+    //     $this->load->view('user/header');
+    //     $this->load->view('user/details_berita',$data);
+    //     $this->load->view('user/footer');
         
         
-    }
+    // }
 
-    public function kirim_komen()
-    {
-        // $this->load->view('user/detail_berita');
-        $nama = $this->input->post('nama');
-        $email = $this->input->post('email');
-        $isi_komentar = $this->input->post('isi_komentar');
-        $this->db->query("INSERT INTO tb_komentar VALUES('','0','$nama','$email','$isi_komentar')");
-        redirect('','refresh');
-    }
-    public function balasKomen() 
-    {
-        $id = $this->input->post('id');
-        $nama = $this->input->post('nama');
-        $email = $this->input->post('email');
-        $isi_komentar = $this->input->post('isi_komentar');
-        $this->db->query("INSERT INTO tb_komentar VALUES('','$id','$nama','$email','$isi_komentar')");
-        redirect('','refresh');
-       }
+    // public function kirim_komen()
+    // {
+    //     // $this->load->view('user/detail_berita');
+    //     $nama = $this->input->post('nama');
+    //     $email = $this->input->post('email');
+    //     $isi_komentar = $this->input->post('isi_komentar');
+    //     $this->db->query("INSERT INTO tb_komentar VALUES('','0','$nama','$email','$isi_komentar')");
+    //     redirect('','refresh');
+    // }
+    // public function balasKomen() 
+    // {
+    //     $id = $this->input->post('id');
+    //     $nama = $this->input->post('nama');
+    //     $email = $this->input->post('email');
+    //     $isi_komentar = $this->input->post('isi_komentar');
+    //     $this->db->query("INSERT INTO tb_komentar VALUES('','$id','$nama','$email','$isi_komentar')");
+    //     redirect('','refresh');
+    //    }
 
        public function simpan_saran()
        {
