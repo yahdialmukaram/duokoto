@@ -9,9 +9,9 @@ class C_admin extends CI_Controller
         parent::__construct();
         $this->load->model('Model');
         $this->load->library('upload');
-        if ($this->session->userdata('level')!=='admin' or 
-        $this->session->userdata('logged_in')!==true
-        )  {
+        if ($this->session->userdata('level') !== 'admin' or
+            $this->session->userdata('logged_in') !== true
+        ) {
             $this->session->set_flashdata('error', 'Anda tidak punya akses untuk menu tersebut');
             redirect('c_login');
         }
@@ -48,7 +48,7 @@ class C_admin extends CI_Controller
         $this->session->set_flashdata('danger', 'Data telah di hapus');
 
         redirect('c_admin/v_saran');
-        
+
     }
     public function details_user($id)
     {
@@ -57,7 +57,7 @@ class C_admin extends CI_Controller
         $this->load->view('layout/details_user', $data);
         $this->load->view('layout/footer');
         // print_r($data);
-      
+
     }
 
     public function tambah()
@@ -66,7 +66,7 @@ class C_admin extends CI_Controller
         $this->load->view('layout/tambah');
         $this->load->view('layout/footer');
 
-}
+    }
     public function edit_berita($id)
     {
         $data['edit'] = $this->Model->model_edit($id);
@@ -75,25 +75,24 @@ class C_admin extends CI_Controller
         $this->load->view('layout/footer');
         // print_r($data);
         // echo json_encode($data);
-	}
-	// fungsi simpan di edit
+    }
+    // fungsi simpan di edit
     public function simpan_edit($id)
     {
-		$gambar=$this->upload('filefoto');
-		if ($gambar['status']=='success') {
-			$data = array(
-				'judul' => $this->input->post('judul'),
-				'image' => $gambar['data'],
-				'isi' => $this->input->post('isi'),
-			);
-		}
-		else {
-			$data = array(
-				'judul' => $this->input->post('judul'),
-				'isi' => $this->input->post('isi'),
-			);
-		}
-		$this->Model->model_edit_simpan($id, $data);
+        $gambar = $this->upload('filefoto');
+        if ($gambar['status'] == 'success') {
+            $data = array(
+                'judul' => $this->input->post('judul'),
+                'image' => $gambar['data'],
+                'isi' => $this->input->post('isi'),
+            );
+        } else {
+            $data = array(
+                'judul' => $this->input->post('judul'),
+                'isi' => $this->input->post('isi'),
+            );
+        }
+        $this->Model->model_edit_simpan($id, $data);
         $this->session->set_flashdata('success', 'Data telah di ubah');
         redirect('c_admin/v_berita');
     }
@@ -107,37 +106,36 @@ class C_admin extends CI_Controller
     public function pageview()
     {
         $this->load->view('pageview');
-        
+
     }
     public function simpan_post()
     {
-		// coding simpan di buat lebih simpal
+        // coding simpan di buat lebih simpal
         $gambar = $this->upload('filefoto');
         $jdl = $this->input->post('judul');
         $isi = $this->input->post('isi');
-        $kategori=$this->input->post('kategori');
-        if ($kategori=='0') {
+        $kategori = $this->input->post('kategori');
+        if ($kategori == '0') {
             $this->session->set_flashdata('success', 'Ketegori belum anda pilih');
             redirect('c_admin/V_berita');
-        }else {
+        } else {
             if ($gambar['status'] == 'success') {
                 $object = [
                     'judul' => $jdl,
                     'isi' => $isi,
                     'image' => $gambar['data'],
-                    'kategori'=>$kategori,
+                    'kategori' => $kategori,
                 ];
                 $this->Model->simpan_berita($object);
                 $this->session->set_flashdata('success', 'Berita berhasil di simpan');
                 redirect('c_admin/V_berita');
-            }
-            else {
+            } else {
                 $this->session->set_flashdata('success', 'Data Gagal di upload');
                 redirect('c_admin/V_berita');
             }
         }
-	}
-	// tambah kan fungsi upload  untuk semua
+    }
+    // tambah kan fungsi upload  untuk semua
     public function upload($name)
     {
         $config['upload_path'] = './assets/images/'; //path folder
@@ -145,7 +143,7 @@ class C_admin extends CI_Controller
         $config['encrypt_name'] = true; //nama yang terupload nantinya
 
         $this->upload->initialize($config);
-        if (!empty($_FILES['filefoto']['name'])) {
+        if (!empty($_FILES[$name]['name'])) {
             if ($this->upload->do_upload($name)) {
                 $gbr = $this->upload->data();
                 // Compress Image
@@ -163,14 +161,15 @@ class C_admin extends CI_Controller
                 $response['status'] = 'success';
                 return $response;
             } else {
-                $response['status'] = 'erroe';
+                $response['status'] = 'error';
                 return $response;
                 // redirect('c_admin/V_berita');
             }
 
+        } else {
+            return $response['status'] = 'image not found';
         }
     }
-
 
     // olahraga
 
@@ -182,26 +181,25 @@ class C_admin extends CI_Controller
     }
     public function simpan_olahraga()
     {
-        
-            // coding simpan di buat lebih simpal
-            $gambar = $this->upload('filefoto');
-            $jdl = $this->input->post('judul');
-            $isi = $this->input->post('isi');
-            if ($gambar['status'] == 'success') {
-                $object = [
-                    'judul' => $jdl,
-                    'isi' => $isi,
-                    'image' => $gambar['data'],
-                ];
-                $this->Model->simpan_berita($object);
-                $this->session->set_flashdata('success', 'Berita berhasil di simpan');
-                redirect('c_admin/V_berita');
-            }
-            else {
-                $this->session->set_flashdata('success', 'Data Gagal di upload');
-                redirect('c_admin/V_berita');
-            }
-        
+
+        // coding simpan di buat lebih simpal
+        $gambar = $this->upload('filefoto');
+        $jdl = $this->input->post('judul');
+        $isi = $this->input->post('isi');
+        if ($gambar['status'] == 'success') {
+            $object = [
+                'judul' => $jdl,
+                'isi' => $isi,
+                'image' => $gambar['data'],
+            ];
+            $this->Model->simpan_berita($object);
+            $this->session->set_flashdata('success', 'Berita berhasil di simpan');
+            redirect('c_admin/V_berita');
+        } else {
+            $this->session->set_flashdata('success', 'Data Gagal di upload');
+            redirect('c_admin/V_berita');
+        }
+
     }
     public function V_berita_olahraga()
     {
@@ -213,7 +211,7 @@ class C_admin extends CI_Controller
     }
     public function tambah_data_penduduk()
     {
-        
+
         $this->load->view('layout/header');
         $this->load->view('layout/tambah_data_penduduk');
         $this->load->view('layout/footer');
@@ -222,7 +220,7 @@ class C_admin extends CI_Controller
     public function data_penduduk()
     {
 
-        $data ['tb_penduduk'] = $this->Model->tampil_data_penduduk();
+        $data['tb_penduduk'] = $this->Model->tampil_data_penduduk();
 
         $this->load->view('layout/header');
         $this->load->view('layout/data_penduduk', $data);
@@ -231,33 +229,35 @@ class C_admin extends CI_Controller
     }
     public function simpan_data_penduduk()
     {
-        
-        $data = array(
-            'nik'             => $this->input->post('nik'),
-            'nama'            => $this->input->post('nama'),
-            'tgl_lahir'    => $this->input->post('tgl_lahir'),
-            'jenis_kelmain'   => $this->input->post('jenis_kelamin'),
-            'alamat'          => $this->input->post('alamat'),
-            'agama'           => $this->input->post('agama'),
-            'status_perkawinan'=> $this->input->post('status_perkawinan'),
-            'pekerjaan'       => $this->input->post('pekerjaan'),
-            'kewarganegaraan' => $this->input->post('kewarganegaraan'),
-            'image'            => $this->input->post('image'),
-            // if ($gambar['status']=='success') {
-                //     # code...
-                // }
-                
+        $image = $this->upload('foto');
+        $agama = $this->input->post('agama');
+        if ($agama == '0') {
+
+            $this->session->set_flashdata('error', 'Anda Belum memilih agama');
+            redirect('c_admin/tambah_data_penduduk');
+        }
+        if ($image['status'] == 'success') {
+            $data = array(
+                'nik' => $this->input->post('nik'),
+                'nama' => $this->input->post('nama'),
+                'tgl_lahir' => $this->input->post('tgl_lahir'),
+                'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+                'alamat' => $this->input->post('alamat'),
+                'agama' => $this->input->post('agama'),
+                'status_perkawinan' => $this->input->post('status_perkawinan'),
+                'pekerjaan' => $this->input->post('pekerjaan'),
+                'kewarganegaraan' => $this->input->post('kewarganegaraan'),
+                'image' => $image['data'],
+
             );
             $this->Model->simpan_data_penduduk($data);
-            $this->load->view('layout/header');
-        $this->load->view('layout/footer');
-        
-        redirect('c_admin/data_penduduk');
-        
-        // print_r($data);
-        
-        
-        
+            $this->session->set_flashdata('success', 'Foto berhasil di tambahkan');
+            redirect('c_admin/data_penduduk');
+        } else {
+            $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
+            redirect('c_admin/tambah_data_penduduk');
         }
+
+    }
 
 }

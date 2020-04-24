@@ -7,7 +7,7 @@
 		</h1>
 		<br>
 		<!-- </button> -->
-
+	
 		<a href="<?= base_url();?>c_admin/tambah_data_penduduk" class="btn btn-primary fa fa-plus"> Tambah Data
 			Penduduk</a>
 		<!-- <a href="tambah_olahraga" class="btn btn-primary fa fa-plus"> Tambah Berita Olahraga</a> -->

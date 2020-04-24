@@ -22,8 +22,13 @@
 					<!-- /.box-header -->
 					
 					<!-- form start -->
-
-					<form class="form-horizontal" action="<?= base_url();?>C_admin/simpan_data_penduduk" method="post">
+					<?php if ($this->session->flashdata('error')):?>
+						<div class="alert alert-danger" role="alert">
+							<strong><?=$this->session->flashdata('error');
+							?></strong>
+						</div>
+					<?php endif;?>
+					<form class="form-horizontal" action="<?=base_url();?>C_admin/simpan_data_penduduk" method="post" enctype="multipart/form-data" >
 						<div class="box-body">
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Nik</label>
@@ -135,8 +140,7 @@
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 								<div class="col-sm-10 col-md-6">
-									<input type="file" name="image" class=" form-control"required id="inputEmail3"
-										placeholder="Image">
+									<input type="file" name="foto" class="form-control" required >
 								</div>
 							</div>
 						
