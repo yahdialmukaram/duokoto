@@ -231,7 +231,10 @@
 <script>
 
 </script>
-<script>    
+<script>
+$("#datepicker").datepicker({
+	format:'dd-mm-yyyy',
+});    
 $('#example2').DataTable()
 window.setTimeout(function(){
   $("#pesan").fadeTo(1000,0).slideUp(500,function () { 
