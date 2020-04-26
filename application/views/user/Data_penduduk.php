@@ -28,7 +28,7 @@
 						return implode(" ",array_splice($words,0,$word_limit));
 					}
           $no = 1;
-          foreach ($data_penduduk as $key => $value):  ?>
+          foreach ($data as $key => $value):  ?>
 
 
  				<tr>
