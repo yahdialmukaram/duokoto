@@ -229,11 +229,21 @@ class C_admin extends CI_Controller
     }
     public function simpan_data_penduduk()
     {
-        $image = $this->upload('foto');
+
+
+        // cara input foto
+        $image = $this->upload('image');
+        // input jk
+        $jeniskelamin = $this->input->post('jenis_kelamin');
+        if ($jeniskelamin == '0') {
+            $this->session->set_flashdata('error', 'Anda Belum Memilih Jenis Kelamin');
+            redirect('c_admin/tambah_data_penduduk');      
+        }
+        // input agama
         $agama = $this->input->post('agama');
         if ($agama == '0') {
 
-            $this->session->set_flashdata('error', 'Anda Belum memilih agama');
+            $this->session->set_flashdata('error', 'Anda Belum Memilih agama');
             redirect('c_admin/tambah_data_penduduk');
         }
         if ($image['status'] == 'success') {
@@ -251,13 +261,24 @@ class C_admin extends CI_Controller
 
             );
             $this->Model->simpan_data_penduduk($data);
-            $this->session->set_flashdata('success', 'Foto berhasil di tambahkan');
+            $this->session->set_flashdata('success', 'Data berhasil di tambahkan');
             redirect('c_admin/data_penduduk');
         } else {
             $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
             redirect('c_admin/tambah_data_penduduk');
         }
 
+    }
+    public function hapus_penduduk($id)
+    {
+        $this->Model->delete_penduduk($id);
+        $this->session->set_flashdata('danger', '
+        resident data successfully deleted');
+        
+        redirect('c_admin/data_penduduk');
+        
+        
+        
     }
 
 }
