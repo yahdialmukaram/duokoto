@@ -130,7 +130,17 @@ class Model extends CI_Model
     function get_berita_list($limit, $start){
         $query = $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
         return $query;
-    }
+	}
+	public function total_row_penduduk(Type $var = null)
+    {
+        $this->db->from('tb_penduduk');
+        return $this->db->count_all_results();
+        
+	}
+	function get_penduduk_list($limit, $start){
+        $query = $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
+        return $query;
+	}
    
 
     
@@ -175,9 +185,8 @@ class Model extends CI_Model
     public function tampil_penduduk()
     {
         $this->db->from('tb_penduduk');
-        $this->db->order_by('id_penduduk', 'desc');
-        
-        
+		$this->db->order_by('id_penduduk', 'desc');
+		$this->db->limit(10);
         return $this->db->get()->result_array();
         
     }

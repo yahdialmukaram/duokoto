@@ -230,14 +230,13 @@ class C_admin extends CI_Controller
     public function simpan_data_penduduk()
     {
 
-
         // cara input foto
         $image = $this->upload('image');
         // input jk
         $jeniskelamin = $this->input->post('jenis_kelamin');
         if ($jeniskelamin == '0') {
             $this->session->set_flashdata('error', 'Anda Belum Memilih Jenis Kelamin');
-            redirect('c_admin/tambah_data_penduduk');      
+            redirect('c_admin/tambah_data_penduduk');
         }
         // input agama
         $agama = $this->input->post('agama');
@@ -274,11 +273,28 @@ class C_admin extends CI_Controller
         $this->Model->delete_penduduk($id);
         $this->session->set_flashdata('danger', '
         resident data successfully deleted');
-        
+
         redirect('c_admin/data_penduduk');
-        
-        
-        
+
+    }
+    public function fake($jumlah)
+    {
+        for ($i = 0; $i < $jumlah; $i++) {
+            $data = array(
+                'nik' => $i,
+                'nama' => 'nama',
+                'tgl_lahir' => 'tanggal_lair',
+                'jenis_kelamin' => 'laki',
+                'alamat' =>'a',
+                'agama' => '2',
+                'status_perkawinan' => '4',
+                'pekerjaan' => '4',
+                'kewarganegaraan' => '5',
+                'image' => '178',
+
+            );
+            $this->Model->simpan_data_penduduk($data);
+        }
     }
 
 }

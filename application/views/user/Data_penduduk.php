@@ -48,16 +48,17 @@
 
 
  				<?php endforeach ; ?>
- 				<div class="row">
+ 				
+
+
+ 			</tbody>
+ 		</table>
+		 <div class="row">
  					<div class="col">
  						<!--Tampilkan pagination-->
  						<?php echo $pagination; ?>
  					</div>
  				</div>
-
-
- 			</tbody>
- 		</table>
  	</div>
 
  </div>
