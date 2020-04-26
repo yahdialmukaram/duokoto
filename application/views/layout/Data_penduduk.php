@@ -44,7 +44,7 @@
 									<th>NO</th>
 									<th>Nik</th>
 									<th>Nama</th>
-									<th>Tempat Tgl Lahir</th>
+									<th>Tanggal Lahir</th>
 									<th>Jenis Kelamin</th>
 									<th>Alamat</th>
 									<th>Agama</th>
@@ -76,8 +76,8 @@
 									<td>
 										<a href="<?php echo base_url(); ?>c_admin/edit_berita/"
 											class="btn btn-info btn-xs"> <i class="fa fa-wrench"></i> </a>
-										<a href="<?php echo base_url(); ?>c_admin/hapus_berita/"
-											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i> </a>
+										<a href="<?php echo base_url(); ?>c_admin/hapus_penduduk/<?= $value['id_penduduk']; ?>"
+											class="btn btn-danger btn-xs"> <i class="fa fa-trash"></i></a>
 									</td>
 								</tr>
 								<?php endforeach; ?>

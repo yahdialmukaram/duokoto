@@ -16,11 +16,8 @@
 						<h3 class="box-title">Input Data Penduduk</h3>
 		
 					</div>
-					
-					
+					<!-- <php echo validation_errors;?> -->
 
-					<!-- /.box-header -->
-					
 					<!-- form start -->
 					<?php if ($this->session->flashdata('error')):?>
 						<div class="alert alert-danger" role="alert">
@@ -35,6 +32,7 @@
 								<div class="col-sm-10 col-md-6">
 									<input type="text" name="nik" class=" form-control" required id="inputEmail3"
 										placeholder="Nik">
+										
 
 								</div>
 							</div>
@@ -65,7 +63,7 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin</label>
 							<div class="col-md-10 col-md-6">
 								<div class="radio">
@@ -77,6 +75,20 @@
 									<label>
 										<input type="radio" name="jenis_kelamin" required value="perempuan">Perempuan
 									</label>
+
+								</div>
+							</div>
+						</div> -->
+						<div class="box-body">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-2 control-label">Jenis Kelamin</label>
+								<div class="col-sm-10 col-md-6">
+									<select name="jenis_kelamin" class="form-control"required id="agama">
+										<option value="0">--Pilih Jenis Kelamin--</option>
+										<option>Laki-Laki</option>
+										<option>Perempuan</option>
+									
+									</select>
 
 								</div>
 							</div>
@@ -140,7 +152,7 @@
 							<div class="form-group">
 								<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 								<div class="col-sm-10 col-md-6">
-									<input type="file" name="foto" class="form-control" required >
+									<input type="file" name="image" class="form-control" required >
 								</div>
 							</div>
 						
@@ -148,7 +160,7 @@
 							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                             <a href="data_penduduk" class="btn btn-primary fa fa-reply-all">Back</a>
 								<!-- <button class="btn btn-primary" type="button"><i class="fa fa-times"></i>Back</button> -->
-								<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-save"></i>Simpan</button>
+								<button type="submit" class="btn btn-success btn-sm"><i class="fa fa-save"></i>Save</button>
 								
 									
 							

@@ -131,33 +131,54 @@ class Model extends CI_Model
         $query = $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
         return $query;
     }
+   
+
     
     
-    function pengunjung()
-    {
-        return $this->db->query("SELECT * FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY ip");
-    }
-    function totalpengunjung(){
-        return $this->db->query("SELECT COUNT(hits) as total FROM tb_pengunjung");
-    }
-    function hits(){
-        return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY tanggal");
-    }
-    function totalhits(){
-        return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung");
-    }
-    function pengunjungonline(){
-        $bataswaktu       = time() - 300;
-        return $this->db->query("SELECT * FROM statistik WHERE online > '$bataswaktu'");
-    }
+    
+    // function pengunjung()
+    // {
+    //     return $this->db->query("SELECT * FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY ip");
+    // }
+    // function totalpengunjung(){
+    //     return $this->db->query("SELECT COUNT(hits) as total FROM tb_pengunjung");
+    // }
+    // function hits(){
+    //     return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung WHERE tanggal='".date("Y-m-d")."' GROUP BY tanggal");
+    // }
+    // function totalhits(){
+    //     return $this->db->query("SELECT SUM(hits) as total FROM tb_pengunjung");
+    // }
+    // function pengunjungonline(){
+    //     $bataswaktu       = time() - 300;
+    //     return $this->db->query("SELECT * FROM statistik WHERE online > '$bataswaktu'");
+    // }
     public function tampil_data_penduduk()
     {
-       return $this->db->get('tb_penduduk')->result_array();
+        $this->db->from('tb_penduduk');
+        $this->db->order_by('id_penduduk', 'desc');
+       return $this->db->get()->result_array();
         
     }
     public function simpan_data_penduduk($data)
     {
         $this->db->insert('tb_penduduk', $data);
+        
+    }
+    public function delete_penduduk($id)
+    {
+        $this->db->where('id_penduduk', $id);
+        $this->db->delete('tb_penduduk');
+        
+        
+    }
+    public function tampil_penduduk()
+    {
+        $this->db->from('tb_penduduk');
+        $this->db->order_by('id_penduduk', 'desc');
+        
+        
+        return $this->db->get()->result_array();
         
     }
 

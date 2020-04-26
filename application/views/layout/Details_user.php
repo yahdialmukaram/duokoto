@@ -23,19 +23,19 @@
 								<form action="<?php echo base_url();?>/c_admin/details_user/<?=$details['id'] ?>"
 									method="post" enctype="multipart/form-data">
 									<label>Nama</label>
-									<input readonly type="text" name="nama" value="<?= $details['nama']; ?>"
+									<input disabled type="text" name="nama" value="<?= $details['nama']; ?>"
 										class="form-control"><br />
 
 										<label>Email</label>
-									<input readonly type="text" name="email" value="<?= $details['email']; ?>"
+									<input disabled type="text" name="email" value="<?= $details['email']; ?>"
 										class="form-control"><br />
 
 										<label>Phone</label>
-									<input readonly type="text" name="no_hp" value="<?= $details['no_hp']; ?>"
+									<input disabled type="text" name="no_hp" value="<?= $details['no_hp']; ?>"
 										class="form-control"><br />
 										
 										<label>Message</label>
-									<input readonly type="text" name="pesan" value="<?= $details['pesan']; ?>"
+									<input disabled type="text" name="pesan" value="<?= $details['pesan']; ?>"
 										class="form-control">
 										<br />
 

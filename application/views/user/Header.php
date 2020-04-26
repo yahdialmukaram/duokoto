@@ -50,7 +50,7 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Penduduk <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="<?= base_url();?>template/details.html">Galapong</a></li>
+							<li><a href="<?= base_url();?>c_user/data_penduduk">Galapong</a></li>
 							<li><a href="<?= base_url();?>template/team.html">Minggadang</a></li>
 							<li><a href="<?= base_url();?>template/gallery.html">Pauh</a></li>
 						</ul>
