@@ -138,8 +138,8 @@ class Model extends CI_Model
         
 	}
 	function get_penduduk_list($limit, $start){
-        $query = $this->db->where('kategori', "berita")->order_by('id', 'desc')->get('tb_berita', $limit, $start);
-        return $query;
+        $query = $this->db->order_by('id_penduduk', 'desc')->get('tb_penduduk', $limit, $start);
+        return $query->result_array();
 	}
    
 
