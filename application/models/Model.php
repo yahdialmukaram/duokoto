@@ -186,7 +186,7 @@ class Model extends CI_Model
     {
         $this->db->from('tb_penduduk');
 		$this->db->order_by('id_penduduk', 'desc');
-		$this->db->limit(10);
+		$this->db->limit(5);
         return $this->db->get()->result_array();
         
     }

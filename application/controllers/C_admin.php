@@ -260,7 +260,7 @@ class C_admin extends CI_Controller
 
             );
             $this->Model->simpan_data_penduduk($data);
-            $this->session->set_flashdata('success', 'Data berhasil di tambahkan');
+            $this->session->set_flashdata('success', 'Data penduduk berhasil di tambahkan');
             redirect('c_admin/data_penduduk');
         } else {
             $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
