@@ -190,7 +190,7 @@ class C_user extends CI_Controller
         $this->load->library('pagination');
         $config['base_url'] = site_url('c_user/data_penduduk'); //site url
         $config['total_rows'] = $this->Model->total_row_penduduk(); //total row
-        $config['per_page'] = 10; //show record per halaman
+        $config['per_page'] = 5; //show record per halaman
         $config["uri_segment"] = 3; // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
@@ -221,7 +221,7 @@ class C_user extends CI_Controller
 
         $data['pagination'] = $this->pagination->create_links();
 
-        $data['data_penduduk'] = $this->Model->tampil_penduduk();
+        $this->Model->tampil_penduduk();
 
         $this->load->view('user/header');
         $this->load->view('user/data_penduduk', $data);

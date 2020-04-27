@@ -5,7 +5,7 @@
  	<div class="col-md-12">
  		<table class="table">
  			<thead>
- 				<tr>
+ 				<tr style="background-color: sienna;">
  					<th>No</th>
  					<th>Nik</th>
  					<th>Nama</th>

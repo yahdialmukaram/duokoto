@@ -190,6 +190,24 @@ class Model extends CI_Model
         return $this->db->get()->result_array();
         
     }
+    public function tampil_dokumentasi()
+    {
+        $this->db->from('tb_dokumentasi');
+        $this->db->order_by('id_dokumentasi', 'desc');
+        
+       return $this->db->get()->result_array();
+        
+    }
+    public function hapus_dokumentasi($id)
+    {
+        $this->db->where('id_dokumentasi', $id);
+        $this->db->delete('tb_dokumentasi');
+    }
+    public function save_dokumentasi($data)
+    {
+        $this->db->insert('tb_dokumentasi', $data);
+        
+    }
 
     
 

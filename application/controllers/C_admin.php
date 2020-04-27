@@ -297,4 +297,47 @@ class C_admin extends CI_Controller
         }
     }
 
+    public function v_dokumentasi()
+    {
+        $data ['dokumentasi'] = $this->Model->tampil_dokumentasi();
+        
+        $this->load->view('layout/header');
+        $this->load->view('layout/v_dokumentasi',$data);
+        $this->load->view('layout/footer');
+    }
+    public function tambah_dokumentasi()
+    {  
+        $this->load->view('layout/header');
+        $this->load->view('layout/tambah_dokumentasi');
+        $this->load->view('layout/footer');
+
+}
+public function hapus_dokumentasi($id)
+{
+     $this->Model->hapus_dokumentasi($id);
+        $this->session->set_flashdata('danger', 'Data telah di hapus');
+
+        redirect('c_admin/v_dokumentasi');
+
+}
+public function save_dokumentasi()
+{
+    $image = $this->upload('image');
+    if ($image['status']== 'success') {
+    
+    $data = [
+        'judul ' => $this->input->post('judul'),
+        'image' => $image ['data'],
+    ];
+    $this->Model->save_dokumentasi($data);
+    $this->session->set_flashdata('success', 'Data dokumentasi success di tambahkan');
+    
+    redirect('c_admin/v_dokumentasi');
+    
+}else {
+    $this->session->set_flashdata('error', 'Foto yang anda upload tidak sesuai kriteria sisten');
+    redirect('c_admin/tambah_dokumentasi');
+}
+
+}
 }

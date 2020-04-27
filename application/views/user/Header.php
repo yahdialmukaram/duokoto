@@ -47,12 +47,13 @@
 					<li><a href="<?= base_url();?>c_user/blog/">Berita Terkini</a></li>
 					<li><a href="<?= base_url();?>c_user/gallery/">Gallery</a></li>
 					<li><a href="<?= base_url();?>c_user/contact/">Contact</a></li>
+					<!-- <li><a href="<?= base_url();?>c_user/data_penduduk/">Data Penduduk</a></li> -->
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Penduduk <b class="caret"></b></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Jorng<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="<?= base_url();?>c_user/data_penduduk">Galapong</a></li>
-							<li><a href="<?= base_url();?>template/team.html">Minggadang</a></li>
-							<li><a href="<?= base_url();?>template/gallery.html">Pauh</a></li>
+							<li><a href="<?= base_url();?>c_user/data_penduduk">Data Penduduk</a></li>
+							<li><a href="<?= base_url();?>c_user/gallery">Galerry</a></li>
+							<li><a href="<?= base_url();?>template/team.html">Dokumentasi Kegiatan</a></li>
 						</ul>
 					</li>
 				</ul>

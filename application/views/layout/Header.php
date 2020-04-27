@@ -354,7 +354,7 @@
         </li>
         <li class="active treview">
           <a href="<?= base_url();?>c_admin/data_penduduk/"><i class="fa fa-book"></i> <span>Data Penduduk</span>
-
+          <a href="<?= base_url();?>c_admin/v_dokumentasi/"><i class="fa fa-book"></i> <span>Input Dokumentasi</span>
           <a href="<?= base_url();?>C_login">
             <i class="fa fa-power-off"></i> <span>Logout</span>
            
