@@ -116,14 +116,19 @@ class C_user extends CI_Controller
     }
     public function gallery()
     {
+        $data['gallery'] = $this->Model->tampil_gallery();
+        $data['berita_olahraga'] = $this->Model->berita_home('olahraga');
+
+      
         $this->load->view('user/header');
-        $this->load->view('user/gallery');
+        $this->load->view('user/gallery',$data);
         $this->load->view('user/footer');
     }
     public function contact()
     {
+        $data['berita_olahraga'] = $this->Model->berita_home('olahraga');
         $this->load->view('user/header');
-        $this->load->view('user/contact');
+        $this->load->view('user/contact',$data);
         $this->load->view('user/footer');
     }
     public function details_berita($id)
@@ -222,6 +227,7 @@ class C_user extends CI_Controller
         $data['pagination'] = $this->pagination->create_links();
 
         $this->Model->tampil_penduduk();
+        $data['berita_olahraga'] = $this->Model->berita_home('olahraga');
 
         $this->load->view('user/header');
         $this->load->view('user/data_penduduk', $data);
@@ -229,5 +235,6 @@ class C_user extends CI_Controller
 		// print_r($config);
 
     }
+    
 
 }

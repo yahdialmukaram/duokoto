@@ -208,6 +208,15 @@ class Model extends CI_Model
         $this->db->insert('tb_dokumentasi', $data);
         
     }
+    public function tampil_gallery()
+    {
+     $this->db->from('tb_dokumentasi');
+     $this->db->order_by('id_dokumentasi', 'desc');
+     
+    return $this->db->get('')->result();
+    
+        
+    }
 
     
 

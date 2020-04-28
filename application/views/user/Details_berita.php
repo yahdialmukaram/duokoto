@@ -40,9 +40,11 @@
 							</div>
 							<div class="col-sm-12">
 								<div class="center_3">
-									<!-- <h3><a href="#"><?= $value->judul; ?> </a></h3> -->
+									<h3><a href="#"><?= $value->judul; ?> </a></h3>
+									<!-- <br> -->
+									<h6><a href="#"><?= $value->tanggal;?></a>
 									<br>
-									<!-- <h6><a href="#"><?= $value->tanggal;?></a> -->
+									<br>
 									<h6><a href=""></a><?= ($value->isi); ?></h6>
 									<!-- AddToAny BEGIN -->
 									<div class="a2a_kit a2a_kit_size_32 a2a_default_style">

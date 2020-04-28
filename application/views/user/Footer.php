@@ -3,7 +3,7 @@
     <div class="footer_main clearfix">
 	 <div class="col-sm-4">
 	 <div class="footer_1">
-	  <h3>DAPIBUS DIAM</h3>
+	  <h3>IPD</h3>
 	  <p><a href="#"><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-half-o"></i> Duo Koto Malalo</a></p>
 	 </div>
 	 <div class="footer_2">
@@ -23,65 +23,25 @@
 	 </div>
 	 <div class="col-sm-4">
 	  <div class="footer_4">
-	   <h3>SEMPER PORTA:</h3>
+	   <h3>OLAHRAGA</h3>
 	  </div>
+	  <?php foreach ($berita_olahraga as $key => $value) :?>
 	  <div class="col-sm-12">
 	   <div class="col-sm-4">
 	    <div class="footer_5">
-		 <p><a href="#"><img src="<?= base_url();?>template/img/19.jpg"></a></p>
+		<p> <a href="#"><img src="<?= base_url();?>assets/images/<?=$value->image;?>"
+												width="100%"></a></p>
 		</div>
 	   </div>
 	   <div class="col-sm-8">
 	    <div class="footer_6">
-		 <h5><a href="#">Praesent Mauris. Fusce Nec Tellus Sed Augue Semper</a></h5>
-		 <p>MARCH 11, 2017</p>
+		<h5><a href="<?= base_url();?>/c_user/details_berita/<?=$value->id;?>"><?= $value->judul; ?>
+											</a></h5>
 		</div>
 	   </div>
 	  </div>
-	  <div class="col-sm-12">
-	   <div class="col-sm-4">
-	    <div class="footer_5">
-		 <p><a href="#"><img src="<?= base_url();?>template/img/20.jpg"></a></p>
-		</div>
-	   </div>
-	   <div class="col-sm-8">
-	    <div class="footer_6">
-		 <h5><a href="#">Nulla Quis Sem At Nibh Elementum Imperdiet. Duis</a></h5>
-		 <p>MARCH 11, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12">
-	   <div class="col-sm-4">
-	    <div class="footer_5">
-		 <p><a href="#"><img src="<?= base_url();?>template/img/21.jpg"></a></p>
-		</div>
-	   </div>
-	   <div class="col-sm-8">
-	    <div class="footer_6">
-		 <h5><a href="#">Augue Semper Porta. Mauris Massa. Vestibulum Lacinia Arcu</a></h5>
-		 <p>MARCH 11, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12">
-	   <div class="col-sm-4">
-	    <div class="footer_5">
-		 <p><a href="#"><img src="<?= base_url();?>template/img/22.jpg"></a></p>
-		</div>
-	   </div>
-	   <div class="col-sm-8">
-	    <div class="footer_6">
-		 <h5><a href="#">Praesent Mauris. Fusce Nec Tellus Sed Augue Semper Porta.</a></h5>
-		 <p>MARCH 11, 2017</p>
-		</div>
-	   </div>
-	  </div>
-	  <div class="col-sm-12">
-	   <div class="footer_7">
-	    <p><i class="fa fa-arrow-right"></i><a href="#">Dignissim Lacinia Ad</a></p>
-	   </div> 
-	  </div>
+	  
+	  <?php endforeach; ?>
 	 </div>
 	</div>
    </div>

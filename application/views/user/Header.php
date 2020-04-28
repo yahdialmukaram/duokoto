@@ -53,7 +53,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="<?= base_url();?>c_user/data_penduduk">Data Penduduk</a></li>
 							<li><a href="<?= base_url();?>c_user/gallery">Galerry</a></li>
-							<li><a href="<?= base_url();?>template/team.html">Dokumentasi Kegiatan</a></li>
+							<!-- <li><a href="<?= base_url();?>template/team.html">Dokumentasi Kegiatan</a></li> -->
 						</ul>
 					</li>
 				</ul>
