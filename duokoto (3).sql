@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Apr 2020 pada 11.21
+-- Waktu pembuatan: 28 Apr 2020 pada 07.52
 -- Versi server: 10.1.31-MariaDB
 -- Versi PHP: 7.2.3
 
@@ -72,7 +72,43 @@ INSERT INTO `tb_berita` (`id`, `judul`, `image`, `isi`, `kategori`, `tanggal`) V
 (97, 'bola kaki di menjamu dunia', 'b9d4dcde65cfd8d7853e0d875ecb5a87.jpg', '<p>sasas&nbsp; &nbsp;dddddd wwwww wwww qwqw&nbsp;sasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqwsasas&nbsp; &nbsp;dddddd wwwww wwww qwqw</p>\r\n', 'olahraga', '2020-04-22 01:05:59'),
 (98, 'nagadang mlaamh hari', 'bd343b0b3e797898220918ba3e386125.jpg', '<p>nagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh hari&nbsp;nagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh harinagadang mlaamh hari</p>\r\n', 'berita', '2020-04-22 02:18:11'),
 (99, 'jorong duo koto tulak bala', 'd83bb4b6a3ca195dda7ce1f534c28f81.jpg', '<p>malalo kusunya jorong duo koto tulak bala menghalang muibah masuk, semoga allah menjauhi musibah dari allah.</p>\r\n', 'berita', '2020-04-22 20:20:44'),
-(100, 'anak sultan', 'b9a167f8d773089ea91b3f9327b8e12f.jpg', '<p>anak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultan</p>\r\n', 'berita', '2020-04-23 14:27:22');
+(100, 'anak sultan', 'b9a167f8d773089ea91b3f9327b8e12f.jpg', '<p>anak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultananak sultan</p>\r\n', 'berita', '2020-04-23 14:27:22'),
+(101, 'malam ronda covid 19', '659b70e0f2f91ee2707bf9232788e7b1.png', '<p>ssssssssssss</p>\r\n', 'olahraga', '2020-04-26 17:26:52'),
+(102, 'napi kabur', '18859221c236783823c120d5fb0fe9e5.jpg', '<p>napi kabur cok&nbsp;&nbsp;napi kabur cok&nbsp;napi kabur cok&nbsp;napi kabur cok&nbsp;napi kabur cok&nbsp;napi kabur cok&nbsp;</p>\r\n', 'berita', '2020-04-26 17:27:38'),
+(103, 'tadarusan di malalo', '607bee0c882f12d5a3fa0f08f8ded547.jpg', '<p>malalo bertdasus saat bula rmadan&nbsp;malalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanmalalo bertdasus saat bula rmadanv</p>\r\n', 'berita', '2020-04-28 03:12:45'),
+(104, 'corona di indosesia', 'd8911e932cf04546abd328ca05637a14.png', '<p>kkk</p>\r\n', 'olahraga', '2020-04-28 12:23:42'),
+(105, 'corona di indosesia', '40b3110d29c69b1d771adbc08e4da38d.jpg', '<p>x</p>\r\n', 'olahraga', '2020-04-28 12:26:01'),
+(106, 'corona di indosesia', '87db9656887aa169a582fc1e6b8b6fc5.jpg', '<p>xxx</p>\r\n', 'olahraga', '2020-04-28 12:26:12'),
+(107, 'corona di indosesia', '5591d23dbfb041140b2d03291aed2357.jpg', '<p>s</p>\r\n', 'olahraga', '2020-04-28 12:26:23'),
+(108, 'corona di indosesia', 'a2853e1678d599433049e4596e3389f7.jpg', '<p>ww</p>\r\n', 'olahraga', '2020-04-28 12:26:33'),
+(109, 'corona di indosesia', '726942e5de484f93b80ed8687b7e496a.jpg', '<p>s</p>\r\n', 'olahraga', '2020-04-28 12:27:02');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_dokumentasi`
+--
+
+CREATE TABLE `tb_dokumentasi` (
+  `id_dokumentasi` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_dokumentasi`
+--
+
+INSERT INTO `tb_dokumentasi` (`id_dokumentasi`, `judul`, `image`) VALUES
+(5, 'produk terbaru', 'd9047e688d4b4ff45bd0c5da81036249.jpg'),
+(6, 'corona di indosesia', 'f386c43f06071dd530b93ce95e613024.jpg'),
+(7, 'goro puncak lubang', '9bc28316b6107533612bc561fe439c23.jpg'),
+(8, 'nadia manoonto di BUAN PUASA', '78bf0df5f433cd64cdf9fdc0f4d8a936.jpg'),
+(9, 'bukbar bersama', 'ee66bc3fe3a1780fb03acf28d3a9ac60.jpg'),
+(10, 'nadia corona', '8daa19909d7eb82fab7375d7dffba3c1.jpg'),
+(11, 'anak sultan', '76e95ece2669277c432046b2d5459ec5.jpg'),
+(12, 'corona di indosesia', 'fe649df6622326b446365b9888c3d3f6.jpg'),
+(13, 'corona di indosesia', '0bb07a9ae0b8ce6226b6c40f64fa1d03.jpg');
 
 -- --------------------------------------------------------
 
@@ -113,7 +149,23 @@ CREATE TABLE `tb_penduduk` (
 --
 
 INSERT INTO `tb_penduduk` (`id_penduduk`, `nik`, `nama`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `agama`, `status_perkawinan`, `pekerjaan`, `kewarganegaraan`, `image`) VALUES
-(1, '123', 'yahdi', 'malalo 3 juli96', 'laki', 'malalo duo koto', 'islam', 'belum', 'nganggur', 'indomesia', 'belum ada');
+(48, '1771070307960001', 'yahdi almukaram', '14-04-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '3bd01ac68c910ef87655cffe15c8bcbc.jpg'),
+(49, '1771070307960002', 'nadia', '03-03-2020', 'Perempuan', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '182ad84f2020c513967e2458a5ebd74b.png'),
+(50, '1771070307960001', 'yusi', '03-03-2020', 'Perempuan', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '27fbdc4169fe62d1959728cd27a1a0dd.PNG'),
+(51, '1771070307960001', 'yahdi almukaram', '03-03-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '010638ec96e661d3294880a38c598c61.jpg'),
+(52, '1771070307960001', 'yahdi almukaram', '03-03-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '89e721094e8892da1ac319d32e9b1db5.jpg'),
+(53, '1771070307960001', 'hendra', '01-04-2020', 'Laki-Laki', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', 'e53c866592f241a954772cad9078ad8e.jpg'),
+(54, '1771070307960001', 'yahdi almukaram', '03-04-2020', 'Laki-Laki', 'malalo', 'Kristen', 'belum', 'mahasiswa', 'indonesia', '9caa5867c2930c43955049a40846760d.jpg'),
+(55, '1771070307960001', 'nadia', '01-04-2020', 'Perempuan', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', 'fdae8cf03aadce96616564a48af12ef0.jpeg'),
+(56, '1771070307960001', 'yahdi almukaram', '28-04-2020', 'Laki-Laki', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', '14a44e5a1fbfb0644923074c4780f45a.PNG'),
+(57, '1771070307960001', 'yahdi ', '03-03-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', 'fd655dc22751283ee649381d1b19e43e.png'),
+(58, '1771070307960001', 'yahdi almukaram', '03-03-2020', 'Laki-Laki', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', 'ab641ab1f825403403c4ce8be4f04804.jpg'),
+(59, '1771070307960001', 'udin kurik', '28-04-2020', 'Laki-Laki', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', 'a3ebe97b28ecdfdb053976803775e84f.png'),
+(60, '1771070307960001', 'fitri', '03-05-2020', 'Perempuan', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', '75bd176d2eb30f6c3da24eabfa0951e9.jpg'),
+(61, '1771070307960001', 'rara', '28-04-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '9d8bc905e3dd9e573131a722c5ee39e3.jpg'),
+(62, '1771070307960001', 'surat', '03-03-2020', 'Laki-Laki', 'malalo', 'Islam', 'belum', 'mahasiswa', 'indonesia', '8f04303d1a1ea444df3b3f94917f8420.jpg'),
+(63, '1234567', 'nong', '20-04-2020', 'Perempuan', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Khatolik', 'belum', 'mahasiswa', 'indonesia', '62b904cb655de01c71b9d286e1001584.jpg'),
+(64, '1771070307960004', 'mala', '03-03-2020', 'Laki-Laki', 'duo koto mlalo kecamatan batipuh selatan kabupatan tanah datar', 'Islam', 'belum', 'mahasiswa', 'indonesia', '162ed159502c759240f07f7c18664181.jpg');
 
 -- --------------------------------------------------------
 
@@ -161,7 +213,8 @@ INSERT INTO `tb_saran` (`id`, `nama`, `email`, `no_hp`, `tanggal`, `pesan`) VALU
 (21, 'udin', 'nadi$gmail.com', 9099090, '21-04-2020 21:03:53', 'udins aysjaks'),
 (22, 'mann', 'yus@gmail.com', 2147483647, '21-04-2020 21:29:22', 'saya kaget'),
 (23, 'yahdi almukaram', 'yahdialmukaram03@gmail.com', 2147483647, '21-04-2020 21:29:57', 'alakaram'),
-(24, 'yahdi', 'yahdialmukaram03@gmail.com', 2147483647, '22-04-2020 15:24:46', 'admin tong tnbha iko bulih rncak admin');
+(24, 'yahdi', 'yahdialmukaram03@gmail.com', 2147483647, '22-04-2020 15:24:46', 'admin tong tnbha iko bulih rncak admin'),
+(25, 'yahdi almukaram', 'yahdialmukaram03@gmail.com', 2147483647, '26-04-2020 13:59:01', 'ddd');
 
 -- --------------------------------------------------------
 
@@ -209,6 +262,12 @@ ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `tb_dokumentasi`
+--
+ALTER TABLE `tb_dokumentasi`
+  ADD PRIMARY KEY (`id_dokumentasi`);
+
+--
 -- Indeks untuk tabel `tb_komentar`
 --
 ALTER TABLE `tb_komentar`
@@ -240,7 +299,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_dokumentasi`
+--
+ALTER TABLE `tb_dokumentasi`
+  MODIFY `id_dokumentasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_komentar`
@@ -252,13 +317,13 @@ ALTER TABLE `tb_komentar`
 -- AUTO_INCREMENT untuk tabel `tb_penduduk`
 --
 ALTER TABLE `tb_penduduk`
-  MODIFY `id_penduduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_penduduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_saran`
 --
 ALTER TABLE `tb_saran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
